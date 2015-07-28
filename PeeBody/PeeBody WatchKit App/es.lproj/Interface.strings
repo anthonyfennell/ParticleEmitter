@@ -1,0 +1,9 @@
+
+/* Class = "WKInterfaceButton"; title = "Start"; ObjectID = "9Si-gd-LUM"; */
+"9Si-gd-LUM.title" = "Start";
+
+/* Class = "WKInterfaceLabel"; text = "Second View"; ObjectID = "Tvd-b3-DfB"; */
+"Tvd-b3-DfB.text" = "Second View";
+
+/* Class = "WKInterfaceLabel"; text = "Alert Label"; ObjectID = "XkS-y5-khE"; */
+"XkS-y5-khE.text" = "Alert Label";

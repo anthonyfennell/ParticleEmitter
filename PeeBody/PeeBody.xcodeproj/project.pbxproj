@@ -1,0 +1,890 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49B8D2FB1B4AC3CD0018DBDA /* OSTrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B8D2FA1B4AC3CD0018DBDA /* OSTrayViewController.m */; };
+		49B8D2FE1B4AC9350018DBDA /* UIView+Position.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B8D2FD1B4AC9350018DBDA /* UIView+Position.m */; };
+		49DAA1441B595688003831F2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49DAA1461B595688003831F2 /* Localizable.strings */; };
+		49DAA1491B595912003831F2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49DAA1461B595688003831F2 /* Localizable.strings */; };
+		49DAF18D1B21EC12008C3C63 /* OSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DAF18C1B21EC12008C3C63 /* OSTabBarController.m */; };
+		49DAF1901B21EC27008C3C63 /* OSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DAF18F1B21EC27008C3C63 /* OSTabBar.m */; };
+		49DAF1931B21F2BE008C3C63 /* UIImage+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DAF1921B21F2BE008C3C63 /* UIImage+Utils.m */; };
+		49DAF1A41B222D3C008C3C63 /* videoIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF1941B222D3C008C3C63 /* videoIcon1.png */; };
+		49DAF1A51B222D3C008C3C63 /* articleIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF1951B222D3C008C3C63 /* articleIcon1.png */; };
+		49DAF1A61B222D3C008C3C63 /* videoIcon1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF1961B222D3C008C3C63 /* videoIcon1@2x.png */; };
+		49DAF1A71B222D3C008C3C63 /* menuIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF1971B222D3C008C3C63 /* menuIcon1.png */; };
+		49DAF1A81B222D3C008C3C63 /* sideButtonIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF1981B222D3C008C3C63 /* sideButtonIcon1.png */; };
+		49DAF1A91B222D3C008C3C63 /* speakerIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF1991B222D3C008C3C63 /* speakerIcon1.png */; };
+		49DAF1AA1B222D3C008C3C63 /* twitterIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF19A1B222D3C008C3C63 /* twitterIcon1.png */; };
+		49DAF1AB1B222D3C008C3C63 /* magazineIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF19B1B222D3C008C3C63 /* magazineIcon1.png */; };
+		49DAF1AC1B222D3C008C3C63 /* playIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF19C1B222D3C008C3C63 /* playIcon1.png */; };
+		49DAF1AD1B222D3C008C3C63 /* playIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF19D1B222D3C008C3C63 /* playIcon2.png */; };
+		49DAF1AE1B222D3C008C3C63 /* podcastIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF19E1B222D3C008C3C63 /* podcastIcon1.png */; };
+		49DAF1AF1B222D3C008C3C63 /* videoIcon1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF19F1B222D3C008C3C63 /* videoIcon1@3x.png */; };
+		49DAF1B01B222D3C008C3C63 /* favoriteIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF1A01B222D3C008C3C63 /* favoriteIcon1.png */; };
+		49DAF1B11B222D3C008C3C63 /* checkmark1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF1A11B222D3C008C3C63 /* checkmark1.png */; };
+		49DAF1B21B222D3C008C3C63 /* backArrow1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF1A21B222D3C008C3C63 /* backArrow1.png */; };
+		49DAF1B31B222D3C008C3C63 /* forwardArrow1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF1A31B222D3C008C3C63 /* forwardArrow1.png */; };
+		49DAF1B71B223C45008C3C63 /* SBTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DAF1B61B223C45008C3C63 /* SBTabBarButton.m */; };
+		49E071A31B3C981C00D6FF43 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E071A21B3C981C00D6FF43 /* InterfaceController.m */; };
+		49E071A61B3C981C00D6FF43 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E071A51B3C981C00D6FF43 /* NotificationController.m */; };
+		49E071A91B3C981C00D6FF43 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E071A81B3C981C00D6FF43 /* GlanceController.m */; };
+		49E071AB1B3C981C00D6FF43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E071AA1B3C981C00D6FF43 /* Images.xcassets */; };
+		49E071AF1B3C981C00D6FF43 /* PeeBody WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 49E071AE1B3C981C00D6FF43 /* PeeBody WatchKit App.app */; };
+		49E071B71B3C981C00D6FF43 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49E071B51B3C981C00D6FF43 /* Interface.storyboard */; };
+		49E071B91B3C981C00D6FF43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E071B81B3C981C00D6FF43 /* Images.xcassets */; };
+		49E071BC1B3C981C00D6FF43 /* PeeBody WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 49E0719C1B3C981C00D6FF43 /* PeeBody WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		49E071C61B3D852000D6FF43 /* SecondInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E071C51B3D852000D6FF43 /* SecondInterfaceController.m */; };
+		49EE580D1B666A8300B30242 /* DWFParticleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EE580C1B666A8300B30242 /* DWFParticleView.m */; };
+		49EE58101B666B3100B30242 /* DWFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EE580F1B666B3100B30242 /* DWFViewController.m */; };
+		49EE58121B66806700B30242 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EE58111B66806700B30242 /* QuartzCore.framework */; };
+		49EE58141B66809E00B30242 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EE58131B66809E00B30242 /* CoreFoundation.framework */; };
+		49F141CB1B66A69E0036C79D /* UISlider+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F141CA1B66A69E0036C79D /* UISlider+Util.m */; };
+		49F141D61B66C17D0036C79D /* ASValuePopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F141D31B66C17D0036C79D /* ASValuePopUpView.m */; };
+		49F141D71B66C17D0036C79D /* ASValueTrackingSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F141D51B66C17D0036C79D /* ASValueTrackingSlider.m */; };
+		49F5E6E71B1CD5F00094278C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F5E6E61B1CD5F00094278C /* main.m */; };
+		49F5E6EA1B1CD5F00094278C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F5E6E91B1CD5F00094278C /* AppDelegate.m */; };
+		49F5E6ED1B1CD5F00094278C /* AFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F5E6EC1B1CD5F00094278C /* AFViewController.m */; };
+		49F5E6F01B1CD5F00094278C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F5E6EE1B1CD5F00094278C /* Main.storyboard */; };
+		49F5E6F21B1CD5F00094278C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49F5E6F11B1CD5F00094278C /* Images.xcassets */; };
+		49F5E6F51B1CD5F00094278C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49F5E6F31B1CD5F00094278C /* LaunchScreen.xib */; };
+		49F5E7011B1CD5F00094278C /* PeeBodyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F5E7001B1CD5F00094278C /* PeeBodyTests.m */; };
+		49F5E7141B1DFD920094278C /* UIViewController+StatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F5E7131B1DFD920094278C /* UIViewController+StatusBar.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		49E071B01B3C981C00D6FF43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49F5E6D91B1CD5F00094278C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49E071AD1B3C981C00D6FF43;
+			remoteInfo = "PeeBody WatchKit App";
+		};
+		49E071BA1B3C981C00D6FF43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49F5E6D91B1CD5F00094278C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49E0719B1B3C981C00D6FF43;
+			remoteInfo = "PeeBody WatchKit Extension";
+		};
+		49F5E6FB1B1CD5F00094278C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49F5E6D91B1CD5F00094278C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49F5E6E01B1CD5F00094278C;
+			remoteInfo = PeeBody;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		49E071C31B3C981C00D6FF43 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				49E071BC1B3C981C00D6FF43 /* PeeBody WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		49B8D2F91B4AC3CD0018DBDA /* OSTrayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSTrayViewController.h; sourceTree = "<group>"; };
+		49B8D2FA1B4AC3CD0018DBDA /* OSTrayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSTrayViewController.m; sourceTree = "<group>"; };
+		49B8D2FC1B4AC9350018DBDA /* UIView+Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Position.h"; sourceTree = "<group>"; };
+		49B8D2FD1B4AC9350018DBDA /* UIView+Position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Position.m"; sourceTree = "<group>"; };
+		49DAA1411B595622003831F2 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		49DAA1421B595622003831F2 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		49DAA1431B595622003831F2 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Interface.strings; sourceTree = "<group>"; };
+		49DAA1451B595688003831F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		49DAA1471B595692003831F2 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		49DAF18B1B21EC12008C3C63 /* OSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSTabBarController.h; sourceTree = "<group>"; };
+		49DAF18C1B21EC12008C3C63 /* OSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSTabBarController.m; sourceTree = "<group>"; };
+		49DAF18E1B21EC27008C3C63 /* OSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSTabBar.h; sourceTree = "<group>"; };
+		49DAF18F1B21EC27008C3C63 /* OSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSTabBar.m; sourceTree = "<group>"; };
+		49DAF1911B21F2BE008C3C63 /* UIImage+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utils.h"; sourceTree = "<group>"; };
+		49DAF1921B21F2BE008C3C63 /* UIImage+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utils.m"; sourceTree = "<group>"; };
+		49DAF1941B222D3C008C3C63 /* videoIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = videoIcon1.png; sourceTree = "<group>"; };
+		49DAF1951B222D3C008C3C63 /* articleIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = articleIcon1.png; sourceTree = "<group>"; };
+		49DAF1961B222D3C008C3C63 /* videoIcon1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "videoIcon1@2x.png"; sourceTree = "<group>"; };
+		49DAF1971B222D3C008C3C63 /* menuIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuIcon1.png; sourceTree = "<group>"; };
+		49DAF1981B222D3C008C3C63 /* sideButtonIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sideButtonIcon1.png; sourceTree = "<group>"; };
+		49DAF1991B222D3C008C3C63 /* speakerIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speakerIcon1.png; sourceTree = "<group>"; };
+		49DAF19A1B222D3C008C3C63 /* twitterIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterIcon1.png; sourceTree = "<group>"; };
+		49DAF19B1B222D3C008C3C63 /* magazineIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magazineIcon1.png; sourceTree = "<group>"; };
+		49DAF19C1B222D3C008C3C63 /* playIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playIcon1.png; sourceTree = "<group>"; };
+		49DAF19D1B222D3C008C3C63 /* playIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playIcon2.png; sourceTree = "<group>"; };
+		49DAF19E1B222D3C008C3C63 /* podcastIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = podcastIcon1.png; sourceTree = "<group>"; };
+		49DAF19F1B222D3C008C3C63 /* videoIcon1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "videoIcon1@3x.png"; sourceTree = "<group>"; };
+		49DAF1A01B222D3C008C3C63 /* favoriteIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favoriteIcon1.png; sourceTree = "<group>"; };
+		49DAF1A11B222D3C008C3C63 /* checkmark1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark1.png; sourceTree = "<group>"; };
+		49DAF1A21B222D3C008C3C63 /* backArrow1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backArrow1.png; sourceTree = "<group>"; };
+		49DAF1A31B222D3C008C3C63 /* forwardArrow1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forwardArrow1.png; sourceTree = "<group>"; };
+		49DAF1B51B223C45008C3C63 /* SBTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTabBarButton.h; sourceTree = "<group>"; };
+		49DAF1B61B223C45008C3C63 /* SBTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTabBarButton.m; sourceTree = "<group>"; };
+		49E0719C1B3C981C00D6FF43 /* PeeBody WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PeeBody WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49E0719F1B3C981C00D6FF43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49E071A01B3C981C00D6FF43 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		49E071A11B3C981C00D6FF43 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		49E071A21B3C981C00D6FF43 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		49E071A41B3C981C00D6FF43 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		49E071A51B3C981C00D6FF43 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		49E071A71B3C981C00D6FF43 /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
+		49E071A81B3C981C00D6FF43 /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
+		49E071AA1B3C981C00D6FF43 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		49E071AE1B3C981C00D6FF43 /* PeeBody WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PeeBody WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49E071B41B3C981C00D6FF43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49E071B61B3C981C00D6FF43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		49E071B81B3C981C00D6FF43 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		49E071C41B3D852000D6FF43 /* SecondInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondInterfaceController.h; sourceTree = "<group>"; };
+		49E071C51B3D852000D6FF43 /* SecondInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondInterfaceController.m; sourceTree = "<group>"; };
+		49EE580B1B666A8300B30242 /* DWFParticleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWFParticleView.h; sourceTree = "<group>"; };
+		49EE580C1B666A8300B30242 /* DWFParticleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWFParticleView.m; sourceTree = "<group>"; };
+		49EE580E1B666B3100B30242 /* DWFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWFViewController.h; sourceTree = "<group>"; };
+		49EE580F1B666B3100B30242 /* DWFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWFViewController.m; sourceTree = "<group>"; };
+		49EE58111B66806700B30242 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		49EE58131B66809E00B30242 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		49F141C91B66A69E0036C79D /* UISlider+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UISlider+Util.h"; path = "../UISlider+Util.h"; sourceTree = "<group>"; };
+		49F141CA1B66A69E0036C79D /* UISlider+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UISlider+Util.m"; path = "../UISlider+Util.m"; sourceTree = "<group>"; };
+		49F141D21B66C17D0036C79D /* ASValuePopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValuePopUpView.h; sourceTree = "<group>"; };
+		49F141D31B66C17D0036C79D /* ASValuePopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASValuePopUpView.m; sourceTree = "<group>"; };
+		49F141D41B66C17D0036C79D /* ASValueTrackingSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValueTrackingSlider.h; sourceTree = "<group>"; };
+		49F141D51B66C17D0036C79D /* ASValueTrackingSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASValueTrackingSlider.m; sourceTree = "<group>"; };
+		49F5E6E11B1CD5F00094278C /* PeeBody.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeeBody.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49F5E6E51B1CD5F00094278C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49F5E6E61B1CD5F00094278C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		49F5E6E81B1CD5F00094278C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		49F5E6E91B1CD5F00094278C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		49F5E6EB1B1CD5F00094278C /* AFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFViewController.h; sourceTree = "<group>"; };
+		49F5E6EC1B1CD5F00094278C /* AFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFViewController.m; sourceTree = "<group>"; };
+		49F5E6EF1B1CD5F00094278C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		49F5E6F11B1CD5F00094278C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		49F5E6F41B1CD5F00094278C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		49F5E6FA1B1CD5F00094278C /* PeeBodyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeeBodyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49F5E6FF1B1CD5F00094278C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49F5E7001B1CD5F00094278C /* PeeBodyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeeBodyTests.m; sourceTree = "<group>"; };
+		49F5E7121B1DFD920094278C /* UIViewController+StatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+StatusBar.h"; sourceTree = "<group>"; };
+		49F5E7131B1DFD920094278C /* UIViewController+StatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+StatusBar.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49E071991B3C981C00D6FF43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49F5E6DE1B1CD5F00094278C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49EE58141B66809E00B30242 /* CoreFoundation.framework in Frameworks */,
+				49EE58121B66806700B30242 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49F5E6F71B1CD5F00094278C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49E0719D1B3C981C00D6FF43 /* PeeBody WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				49E071A11B3C981C00D6FF43 /* InterfaceController.h */,
+				49E071A21B3C981C00D6FF43 /* InterfaceController.m */,
+				49E071C41B3D852000D6FF43 /* SecondInterfaceController.h */,
+				49E071C51B3D852000D6FF43 /* SecondInterfaceController.m */,
+				49E071A41B3C981C00D6FF43 /* NotificationController.h */,
+				49E071A51B3C981C00D6FF43 /* NotificationController.m */,
+				49E071A71B3C981C00D6FF43 /* GlanceController.h */,
+				49E071A81B3C981C00D6FF43 /* GlanceController.m */,
+				49E071AA1B3C981C00D6FF43 /* Images.xcassets */,
+				49E0719E1B3C981C00D6FF43 /* Supporting Files */,
+			);
+			path = "PeeBody WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		49E0719E1B3C981C00D6FF43 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				49E0719F1B3C981C00D6FF43 /* Info.plist */,
+				49DAA1461B595688003831F2 /* Localizable.strings */,
+				49E071A01B3C981C00D6FF43 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49E071B21B3C981C00D6FF43 /* PeeBody WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				49E071B51B3C981C00D6FF43 /* Interface.storyboard */,
+				49E071B81B3C981C00D6FF43 /* Images.xcassets */,
+				49E071B31B3C981C00D6FF43 /* Supporting Files */,
+			);
+			path = "PeeBody WatchKit App";
+			sourceTree = "<group>";
+		};
+		49E071B31B3C981C00D6FF43 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				49E071B41B3C981C00D6FF43 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49EE58091B666A3F00B30242 /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				49EE580B1B666A8300B30242 /* DWFParticleView.h */,
+				49EE580C1B666A8300B30242 /* DWFParticleView.m */,
+				49EE580E1B666B3100B30242 /* DWFViewController.h */,
+				49EE580F1B666B3100B30242 /* DWFViewController.m */,
+				49F141C91B66A69E0036C79D /* UISlider+Util.h */,
+				49F141CA1B66A69E0036C79D /* UISlider+Util.m */,
+				49F141D21B66C17D0036C79D /* ASValuePopUpView.h */,
+				49F141D31B66C17D0036C79D /* ASValuePopUpView.m */,
+				49F141D41B66C17D0036C79D /* ASValueTrackingSlider.h */,
+				49F141D51B66C17D0036C79D /* ASValueTrackingSlider.m */,
+			);
+			name = Particles;
+			sourceTree = "<group>";
+		};
+		49EE580A1B666A4C00B30242 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				49DAF1941B222D3C008C3C63 /* videoIcon1.png */,
+				49DAF1951B222D3C008C3C63 /* articleIcon1.png */,
+				49DAF1961B222D3C008C3C63 /* videoIcon1@2x.png */,
+				49DAF1971B222D3C008C3C63 /* menuIcon1.png */,
+				49DAF1981B222D3C008C3C63 /* sideButtonIcon1.png */,
+				49DAF1991B222D3C008C3C63 /* speakerIcon1.png */,
+				49DAF19A1B222D3C008C3C63 /* twitterIcon1.png */,
+				49DAF19B1B222D3C008C3C63 /* magazineIcon1.png */,
+				49DAF19C1B222D3C008C3C63 /* playIcon1.png */,
+				49DAF19D1B222D3C008C3C63 /* playIcon2.png */,
+				49DAF19E1B222D3C008C3C63 /* podcastIcon1.png */,
+				49DAF19F1B222D3C008C3C63 /* videoIcon1@3x.png */,
+				49DAF1A01B222D3C008C3C63 /* favoriteIcon1.png */,
+				49DAF1A11B222D3C008C3C63 /* checkmark1.png */,
+				49DAF1A21B222D3C008C3C63 /* backArrow1.png */,
+				49DAF1A31B222D3C008C3C63 /* forwardArrow1.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		49F5E6D81B1CD5F00094278C = {
+			isa = PBXGroup;
+			children = (
+				49EE58131B66809E00B30242 /* CoreFoundation.framework */,
+				49EE58111B66806700B30242 /* QuartzCore.framework */,
+				49F5E6E31B1CD5F00094278C /* PeeBody */,
+				49F5E6FD1B1CD5F00094278C /* PeeBodyTests */,
+				49E0719D1B3C981C00D6FF43 /* PeeBody WatchKit Extension */,
+				49E071B21B3C981C00D6FF43 /* PeeBody WatchKit App */,
+				49F5E6E21B1CD5F00094278C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		49F5E6E21B1CD5F00094278C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49F5E6E11B1CD5F00094278C /* PeeBody.app */,
+				49F5E6FA1B1CD5F00094278C /* PeeBodyTests.xctest */,
+				49E0719C1B3C981C00D6FF43 /* PeeBody WatchKit Extension.appex */,
+				49E071AE1B3C981C00D6FF43 /* PeeBody WatchKit App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49F5E6E31B1CD5F00094278C /* PeeBody */ = {
+			isa = PBXGroup;
+			children = (
+				49F5E6E81B1CD5F00094278C /* AppDelegate.h */,
+				49F5E6E91B1CD5F00094278C /* AppDelegate.m */,
+				49F5E6EB1B1CD5F00094278C /* AFViewController.h */,
+				49F5E6EC1B1CD5F00094278C /* AFViewController.m */,
+				49F5E7121B1DFD920094278C /* UIViewController+StatusBar.h */,
+				49F5E7131B1DFD920094278C /* UIViewController+StatusBar.m */,
+				49DAF18B1B21EC12008C3C63 /* OSTabBarController.h */,
+				49DAF18C1B21EC12008C3C63 /* OSTabBarController.m */,
+				49B8D2FC1B4AC9350018DBDA /* UIView+Position.h */,
+				49B8D2FD1B4AC9350018DBDA /* UIView+Position.m */,
+				49B8D2F91B4AC3CD0018DBDA /* OSTrayViewController.h */,
+				49B8D2FA1B4AC3CD0018DBDA /* OSTrayViewController.m */,
+				49DAF18E1B21EC27008C3C63 /* OSTabBar.h */,
+				49DAF18F1B21EC27008C3C63 /* OSTabBar.m */,
+				49DAF1911B21F2BE008C3C63 /* UIImage+Utils.h */,
+				49DAF1921B21F2BE008C3C63 /* UIImage+Utils.m */,
+				49DAF1B51B223C45008C3C63 /* SBTabBarButton.h */,
+				49DAF1B61B223C45008C3C63 /* SBTabBarButton.m */,
+				49EE58091B666A3F00B30242 /* Particles */,
+				49EE580A1B666A4C00B30242 /* Resources */,
+				49F5E6EE1B1CD5F00094278C /* Main.storyboard */,
+				49F5E6F11B1CD5F00094278C /* Images.xcassets */,
+				49F5E6F31B1CD5F00094278C /* LaunchScreen.xib */,
+				49F5E6E41B1CD5F00094278C /* Supporting Files */,
+			);
+			path = PeeBody;
+			sourceTree = "<group>";
+		};
+		49F5E6E41B1CD5F00094278C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				49F5E6E51B1CD5F00094278C /* Info.plist */,
+				49F5E6E61B1CD5F00094278C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49F5E6FD1B1CD5F00094278C /* PeeBodyTests */ = {
+			isa = PBXGroup;
+			children = (
+				49F5E7001B1CD5F00094278C /* PeeBodyTests.m */,
+				49F5E6FE1B1CD5F00094278C /* Supporting Files */,
+			);
+			path = PeeBodyTests;
+			sourceTree = "<group>";
+		};
+		49F5E6FE1B1CD5F00094278C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				49F5E6FF1B1CD5F00094278C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49E0719B1B3C981C00D6FF43 /* PeeBody WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49E071C01B3C981C00D6FF43 /* Build configuration list for PBXNativeTarget "PeeBody WatchKit Extension" */;
+			buildPhases = (
+				49E071981B3C981C00D6FF43 /* Sources */,
+				49E071991B3C981C00D6FF43 /* Frameworks */,
+				49E0719A1B3C981C00D6FF43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49E071B11B3C981C00D6FF43 /* PBXTargetDependency */,
+			);
+			name = "PeeBody WatchKit Extension";
+			productName = "PeeBody WatchKit Extension";
+			productReference = 49E0719C1B3C981C00D6FF43 /* PeeBody WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		49E071AD1B3C981C00D6FF43 /* PeeBody WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49E071BD1B3C981C00D6FF43 /* Build configuration list for PBXNativeTarget "PeeBody WatchKit App" */;
+			buildPhases = (
+				49E071AC1B3C981C00D6FF43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PeeBody WatchKit App";
+			productName = "PeeBody WatchKit App";
+			productReference = 49E071AE1B3C981C00D6FF43 /* PeeBody WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
+		49F5E6E01B1CD5F00094278C /* PeeBody */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49F5E7041B1CD5F00094278C /* Build configuration list for PBXNativeTarget "PeeBody" */;
+			buildPhases = (
+				49F5E6DD1B1CD5F00094278C /* Sources */,
+				49F5E6DE1B1CD5F00094278C /* Frameworks */,
+				49F5E6DF1B1CD5F00094278C /* Resources */,
+				49E071C31B3C981C00D6FF43 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49E071BB1B3C981C00D6FF43 /* PBXTargetDependency */,
+			);
+			name = PeeBody;
+			productName = PeeBody;
+			productReference = 49F5E6E11B1CD5F00094278C /* PeeBody.app */;
+			productType = "com.apple.product-type.application";
+		};
+		49F5E6F91B1CD5F00094278C /* PeeBodyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49F5E7071B1CD5F00094278C /* Build configuration list for PBXNativeTarget "PeeBodyTests" */;
+			buildPhases = (
+				49F5E6F61B1CD5F00094278C /* Sources */,
+				49F5E6F71B1CD5F00094278C /* Frameworks */,
+				49F5E6F81B1CD5F00094278C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49F5E6FC1B1CD5F00094278C /* PBXTargetDependency */,
+			);
+			name = PeeBodyTests;
+			productName = PeeBodyTests;
+			productReference = 49F5E6FA1B1CD5F00094278C /* PeeBodyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49F5E6D91B1CD5F00094278C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Outside Source Design";
+				TargetAttributes = {
+					49E0719B1B3C981C00D6FF43 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					49E071AD1B3C981C00D6FF43 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					49F5E6E01B1CD5F00094278C = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					49F5E6F91B1CD5F00094278C = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 49F5E6E01B1CD5F00094278C;
+					};
+				};
+			};
+			buildConfigurationList = 49F5E6DC1B1CD5F00094278C /* Build configuration list for PBXProject "PeeBody" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				es,
+			);
+			mainGroup = 49F5E6D81B1CD5F00094278C;
+			productRefGroup = 49F5E6E21B1CD5F00094278C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49F5E6E01B1CD5F00094278C /* PeeBody */,
+				49F5E6F91B1CD5F00094278C /* PeeBodyTests */,
+				49E0719B1B3C981C00D6FF43 /* PeeBody WatchKit Extension */,
+				49E071AD1B3C981C00D6FF43 /* PeeBody WatchKit App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49E0719A1B3C981C00D6FF43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49E071AB1B3C981C00D6FF43 /* Images.xcassets in Resources */,
+				49DAA1441B595688003831F2 /* Localizable.strings in Resources */,
+				49E071AF1B3C981C00D6FF43 /* PeeBody WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49E071AC1B3C981C00D6FF43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49E071B71B3C981C00D6FF43 /* Interface.storyboard in Resources */,
+				49E071B91B3C981C00D6FF43 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49F5E6DF1B1CD5F00094278C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49DAF1AF1B222D3C008C3C63 /* videoIcon1@3x.png in Resources */,
+				49F5E6F01B1CD5F00094278C /* Main.storyboard in Resources */,
+				49DAF1A81B222D3C008C3C63 /* sideButtonIcon1.png in Resources */,
+				49DAF1B31B222D3C008C3C63 /* forwardArrow1.png in Resources */,
+				49F5E6F51B1CD5F00094278C /* LaunchScreen.xib in Resources */,
+				49DAA1491B595912003831F2 /* Localizable.strings in Resources */,
+				49DAF1B21B222D3C008C3C63 /* backArrow1.png in Resources */,
+				49DAF1A91B222D3C008C3C63 /* speakerIcon1.png in Resources */,
+				49DAF1AA1B222D3C008C3C63 /* twitterIcon1.png in Resources */,
+				49DAF1AD1B222D3C008C3C63 /* playIcon2.png in Resources */,
+				49DAF1AB1B222D3C008C3C63 /* magazineIcon1.png in Resources */,
+				49DAF1AE1B222D3C008C3C63 /* podcastIcon1.png in Resources */,
+				49DAF1A41B222D3C008C3C63 /* videoIcon1.png in Resources */,
+				49DAF1A61B222D3C008C3C63 /* videoIcon1@2x.png in Resources */,
+				49DAF1AC1B222D3C008C3C63 /* playIcon1.png in Resources */,
+				49F5E6F21B1CD5F00094278C /* Images.xcassets in Resources */,
+				49DAF1B11B222D3C008C3C63 /* checkmark1.png in Resources */,
+				49DAF1A51B222D3C008C3C63 /* articleIcon1.png in Resources */,
+				49DAF1B01B222D3C008C3C63 /* favoriteIcon1.png in Resources */,
+				49DAF1A71B222D3C008C3C63 /* menuIcon1.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49F5E6F81B1CD5F00094278C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49E071981B3C981C00D6FF43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49E071A61B3C981C00D6FF43 /* NotificationController.m in Sources */,
+				49E071A31B3C981C00D6FF43 /* InterfaceController.m in Sources */,
+				49E071A91B3C981C00D6FF43 /* GlanceController.m in Sources */,
+				49E071C61B3D852000D6FF43 /* SecondInterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49F5E6DD1B1CD5F00094278C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49EE580D1B666A8300B30242 /* DWFParticleView.m in Sources */,
+				49DAF1B71B223C45008C3C63 /* SBTabBarButton.m in Sources */,
+				49B8D2FB1B4AC3CD0018DBDA /* OSTrayViewController.m in Sources */,
+				49F5E7141B1DFD920094278C /* UIViewController+StatusBar.m in Sources */,
+				49B8D2FE1B4AC9350018DBDA /* UIView+Position.m in Sources */,
+				49DAF1901B21EC27008C3C63 /* OSTabBar.m in Sources */,
+				49EE58101B666B3100B30242 /* DWFViewController.m in Sources */,
+				49DAF18D1B21EC12008C3C63 /* OSTabBarController.m in Sources */,
+				49F141D71B66C17D0036C79D /* ASValueTrackingSlider.m in Sources */,
+				49F141CB1B66A69E0036C79D /* UISlider+Util.m in Sources */,
+				49DAF1931B21F2BE008C3C63 /* UIImage+Utils.m in Sources */,
+				49F141D61B66C17D0036C79D /* ASValuePopUpView.m in Sources */,
+				49F5E6ED1B1CD5F00094278C /* AFViewController.m in Sources */,
+				49F5E6EA1B1CD5F00094278C /* AppDelegate.m in Sources */,
+				49F5E6E71B1CD5F00094278C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49F5E6F61B1CD5F00094278C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49F5E7011B1CD5F00094278C /* PeeBodyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		49E071B11B3C981C00D6FF43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49E071AD1B3C981C00D6FF43 /* PeeBody WatchKit App */;
+			targetProxy = 49E071B01B3C981C00D6FF43 /* PBXContainerItemProxy */;
+		};
+		49E071BB1B3C981C00D6FF43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49E0719B1B3C981C00D6FF43 /* PeeBody WatchKit Extension */;
+			targetProxy = 49E071BA1B3C981C00D6FF43 /* PBXContainerItemProxy */;
+		};
+		49F5E6FC1B1CD5F00094278C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49F5E6E01B1CD5F00094278C /* PeeBody */;
+			targetProxy = 49F5E6FB1B1CD5F00094278C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		49DAA1461B595688003831F2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49DAA1451B595688003831F2 /* en */,
+				49DAA1471B595692003831F2 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		49E071B51B3C981C00D6FF43 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49E071B61B3C981C00D6FF43 /* Base */,
+				49DAA1431B595622003831F2 /* es */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		49F5E6EE1B1CD5F00094278C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49F5E6EF1B1CD5F00094278C /* Base */,
+				49DAA1411B595622003831F2 /* es */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		49F5E6F31B1CD5F00094278C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49F5E6F41B1CD5F00094278C /* Base */,
+				49DAA1421B595622003831F2 /* es */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		49E071BE1B3C981C00D6FF43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = PeeBody_WatchKit_Extension;
+				INFOPLIST_FILE = "PeeBody WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		49E071BF1B3C981C00D6FF43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = PeeBody_WatchKit_Extension;
+				INFOPLIST_FILE = "PeeBody WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		49E071C11B3C981C00D6FF43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PeeBody WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		49E071C21B3C981C00D6FF43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "PeeBody WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		49F5E7021B1CD5F00094278C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		49F5E7031B1CD5F00094278C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49F5E7051B1CD5F00094278C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PeeBody/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		49F5E7061B1CD5F00094278C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PeeBody/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		49F5E7081B1CD5F00094278C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PeeBodyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeeBody.app/PeeBody";
+			};
+			name = Debug;
+		};
+		49F5E7091B1CD5F00094278C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PeeBodyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeeBody.app/PeeBody";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49E071BD1B3C981C00D6FF43 /* Build configuration list for PBXNativeTarget "PeeBody WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49E071BE1B3C981C00D6FF43 /* Debug */,
+				49E071BF1B3C981C00D6FF43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49E071C01B3C981C00D6FF43 /* Build configuration list for PBXNativeTarget "PeeBody WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49E071C11B3C981C00D6FF43 /* Debug */,
+				49E071C21B3C981C00D6FF43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49F5E6DC1B1CD5F00094278C /* Build configuration list for PBXProject "PeeBody" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49F5E7021B1CD5F00094278C /* Debug */,
+				49F5E7031B1CD5F00094278C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49F5E7041B1CD5F00094278C /* Build configuration list for PBXNativeTarget "PeeBody" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49F5E7051B1CD5F00094278C /* Debug */,
+				49F5E7061B1CD5F00094278C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49F5E7071B1CD5F00094278C /* Build configuration list for PBXNativeTarget "PeeBodyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49F5E7081B1CD5F00094278C /* Debug */,
+				49F5E7091B1CD5F00094278C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49F5E6D91B1CD5F00094278C /* Project object */;
+}

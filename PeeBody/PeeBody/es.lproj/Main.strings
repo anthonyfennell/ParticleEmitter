@@ -1,0 +1,9 @@
+
+/* Class = "UIBarButtonItem"; title = "show tray"; ObjectID = "WgO-In-Kaf"; */
+"WgO-In-Kaf.title" = "show tray";
+
+/* Class = "UILabel"; text = "iPhone portrait. iPad Landscape"; ObjectID = "ft6-Lk-ICg"; */
+"ft6-Lk-ICg.text" = "iPhone portrait. iPad Landscape";
+
+/* Class = "UIBarButtonItem"; title = "show tabBar"; ObjectID = "uP3-u8-lht"; */
+"uP3-u8-lht.title" = "show tabBar";
