@@ -109,7 +109,7 @@
                                     <action selector="slidersMoved:" destination="hOJ-tB-C0v" eventType="valueChanged" id="nmz-Bn-8Ny"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nDC-QH-7sR" userLabel="emissionRange" customClass="ASValueTrackingSlider">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="nDC-QH-7sR" userLabel="emissionRange" customClass="ASValueTrackingSlider">
                                 <rect key="frame" x="168" y="562" width="150" height="31"/>
                                 <connections>
                                     <action selector="slidersMoved:" destination="hOJ-tB-C0v" eventType="valueChanged" id="BZf-b0-SuT"/>

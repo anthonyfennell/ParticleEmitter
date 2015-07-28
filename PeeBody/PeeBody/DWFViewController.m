@@ -38,20 +38,6 @@
     // Do any additional setup after loading the view.
     float height = self.spinSlider.frame.size.height;
     float width = self.spinSlider.frame.size.width;
-    
-    [self.emissionSlider setMinimumValue:0];
-    [self.emissionSlider setMaximumValue:M_PI * 2];
-    
-//    self.spinSlider.title = @"Spin";
-//    self.yAccelSlider.title = @"Y Acceleration";
-//    self.emissionSlider.title = @"Emission";
-//    self.velocitySlider.title = @"Velocity";
-//    self.birthRateSlider.title = @"Birth rate";
-//    self.scaleSpeedSlider.title = @"Scale speed";
-//    self.lifetimeSlider.title = @"Life time";
-//    self.velocityRangeSlider.title = @"Velocity range";
-//    self.scaleSlider.title = @"Scale";
-//    self.lifetimeRangeSlider.title = @"Lifetime range";
 
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, width, height / 2.0)];
     label.attributedText = [[NSAttributedString alloc] initWithString:@"Spin"
@@ -112,8 +98,6 @@
     label.attributedText = [[NSAttributedString alloc] initWithString:@"z Acceleration"
                                                            attributes:@{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:10]}];
     [self.zAccelSlider addSubview:label];
-
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -121,15 +105,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 
 #pragma mark - Touches
@@ -181,7 +157,6 @@
     } else {
         [self.fireView hideFire];
     }
-    
 }
 
 - (IBAction)emitterModeChanged:(id)sender {
