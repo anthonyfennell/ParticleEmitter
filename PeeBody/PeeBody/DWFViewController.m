@@ -7,7 +7,6 @@
 //
 
 #import "DWFViewController.h"
-#import "UISlider+Util.h"
 
 @interface DWFViewController ()
 
@@ -32,6 +31,11 @@
 @end
 
 @implementation DWFViewController
+
+- (IBAction)unwindGravityViewController:(UIStoryboardSegue *)unwindSegue
+{
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -183,16 +187,19 @@
     UISegmentedControl *control = (UISegmentedControl *)sender;
     switch (control.selectedSegmentIndex) {
         case 0:
-            [self.fireView setRenderMode:DWFModePoints];
+            [self.fireView setRenderMode:DWFRenderModeUndordered];
             break;
         case 1:
-            [self.fireView setRenderMode:DWFModeOutline];
+            [self.fireView setRenderMode:DWFRenderModeOldestFirst];
             break;
         case 2:
-            [self.fireView setRenderMode:DWFModeSurface];
+            [self.fireView setRenderMode:DWFRenderModeOldestLast];
             break;
         case 3:
-            [self.fireView setRenderMode:DWFModeVolume];
+            [self.fireView setRenderMode:DWFRenderModeBackToFront];
+            break;
+        case 4:
+            [self.fireView setRenderMode:DWFRenderModeAdditive];
             break;
         default:
             break;

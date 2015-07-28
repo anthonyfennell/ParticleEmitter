@@ -55,34 +55,37 @@
     // Points, Outline, Surface, Volume
     fireEmitter.renderMode = kCAEmitterLayerVolume;
     // Emitter modes: Points, Outline, Surface, Volume
-    fireEmitter.emitterMode = kCAEmitterLayerOutline;
+    fireEmitter.emitterMode = kCAEmitterLayerAdditive;
+    // Defines whether the layer flattens the particles into its pane.
+    fireEmitter.preservesDepth = YES;
     
     CAEmitterCell *fire = [CAEmitterCell emitterCell];
-    fire.birthRate = 0;
+    fire.birthRate = 250;
     fire.lifetime = 2.0;
     fire.lifetimeRange = 0.5;
     fire.color = [[UIColor colorWithRed:0.8 green:0.4 blue:0.2 alpha:0.1] CGColor];
     fire.contents = (id)[[UIImage imageNamed:@"particlesFire1"] CGImage];
     fire.velocity = 26;
     //fire.velocityRange = 20;
-    fire.yAcceleration = 0;
+    fire.yAcceleration = 2;
     fire.emissionRange = M_PI_2;
     fire.scaleSpeed = 0.3;
     fire.spin = 0.5;
     fire.redRange = 0.5;
     fire.blueRange = 0.15;
     fire.greenRange = 0.2;
+    fire.redSpeed = 0.5;
     
     [fire setName:@"fire"];
     
     CAEmitterCell *fire2 = [CAEmitterCell emitterCell];
-    fire2.birthRate = 0;
-    fire2.lifetime = 5.0;
-    fire2.lifetimeRange = 0.5;
-    fire2.color = [[UIColor colorWithRed:228/255.0 green:237/255.0 blue:47/255.0 alpha:1.0] CGColor];
+    fire2.birthRate = 250;
+    fire2.lifetime = 0.2;
+    fire2.lifetimeRange = 0.75;
+    fire2.color = [[UIColor colorWithRed:238/255.0 green:232/255.0 blue:154/255.0 alpha:0.1] CGColor];
     fire2.contents = (id)[[UIImage imageNamed:@"particlesFire1"] CGImage];
     fire2.velocity = 10;
-    fire2.velocityRange = 10;
+    fire2.velocityRange = 5;
     fire2.yAcceleration = 2;
     fire2.emissionRange = M_PI_2;
     fire2.scaleSpeed = 0.3;
@@ -235,6 +238,8 @@
                    forKeyPath:@"emitterCells.rocket.birthRate"];
     [fireEmitter setValue:[NSNumber numberWithFloat:fireBirthRate]
                    forKeyPath:@"emitterCells.fire.birthRate"];
+    [fireEmitter setValue:[NSNumber numberWithFloat:fireBirthRate]
+               forKeyPath:@"emitterCells.fire2.birthRate"];
 }
 
 - (void)hideFire
@@ -242,6 +247,8 @@
     showFire = NO;
     [fireEmitter setValue:[NSNumber numberWithFloat:0]
                forKeyPath:@"emitterCells.fire.birthRate"];
+    [fireEmitter setValue:[NSNumber numberWithFloat:0]
+               forKeyPath:@"emitterCells.fire2.birthRate"];
     [fireEmitter setValue:[NSNumber numberWithFloat:rocketBirthRate]
                forKeyPath:@"emitterCells.rocket.birthRate"];
 }
@@ -278,6 +285,8 @@
 {
     [fireEmitter setValue:[NSNumber numberWithFloat:v]
                forKeyPath:@"emitterCells.fire.yAcceleration"];
+    [fireEmitter setValue:[NSNumber numberWithFloat:v]
+               forKeyPath:@"emitterCells.fire2.yAcceleration"];
     [fireEmitter setValue:[NSNumber numberWithFloat:v * 1]
                 forKeyPath:@"emitterCells.rocket.yAcceleration"];
     [fireEmitter setValue:[NSNumber numberWithFloat:v * 0.85]
@@ -290,6 +299,8 @@
 {
     [fireEmitter setValue:[NSNumber numberWithFloat:v * M_PI_4]
                forKeyPath:@"emitterCells.fire.emissionRange"];
+    [fireEmitter setValue:[NSNumber numberWithFloat:v * M_PI_4 * 0.7]
+               forKeyPath:@"emitterCells.fire2.emissionRange"];
     [fireEmitter setValue:[NSNumber numberWithFloat:v * M_PI_4]
                forKeyPath:@"emitterCells.rocket.emitterCells.firework.emissionRange"];
     [fireEmitter setValue:[NSNumber numberWithFloat:v * M_PI_4]
@@ -300,6 +311,8 @@
 {
     [fireEmitter setValue:[NSNumber numberWithFloat:v]
                forKeyPath:@"emitterCells.fire.velocity"];
+    [fireEmitter setValue:[NSNumber numberWithFloat:v * 0.7]
+               forKeyPath:@"emitterCells.fire2.velocity"];
     [fireEmitter setValue:[NSNumber numberWithFloat:v]
                forKeyPath:@"emitterCells.rocket.velocity"];
     [fireEmitter setValue:[NSNumber numberWithFloat:v]
@@ -314,6 +327,8 @@
     if (showFire) {
         [fireEmitter setValue:[NSNumber numberWithFloat:v]
                    forKeyPath:@"emitterCells.fire.birthRate"];
+        [fireEmitter setValue:[NSNumber numberWithFloat:v * 0.7]
+                   forKeyPath:@"emitterCells.fire2.birthRate"];
     }
 }
 
@@ -321,18 +336,24 @@
 {
     [fireEmitter setValue:[NSNumber numberWithFloat:v]
                forKeyPath:@"emitterCells.fire.scaleSpeed"];
+    [fireEmitter setValue:[NSNumber numberWithFloat:v]
+               forKeyPath:@"emitterCells.fire2.scaleSpeed"];
 }
 
 - (void)setLifetime:(float)v
 {
     [fireEmitter setValue:[NSNumber numberWithFloat:v]
                forKeyPath:@"emitterCells.fire.lifetime"];
+    [fireEmitter setValue:[NSNumber numberWithFloat:v * 0.3]
+               forKeyPath:@"emitterCells.fire2.lifetime"];
 }
 
 - (void)setVelocityRange:(float)v
 {
     [fireEmitter setValue:[NSNumber numberWithFloat:v]
                forKeyPath:@"emitterCells.fire.velocityRange"];
+    [fireEmitter setValue:[NSNumber numberWithFloat:v * 0.3]
+               forKeyPath:@"emitterCells.fire2.velocityRange"];
     [fireEmitter setValue:[NSNumber numberWithFloat:v]
                forKeyPath:@"emitterCells.rocket.velocityRange"];
     [fireEmitter setValue:[NSNumber numberWithFloat:v]
@@ -343,24 +364,32 @@
 {
     [fireEmitter setValue:[NSNumber numberWithFloat:v]
                forKeyPath:@"emitterCells.fire.scale"];
+    [fireEmitter setValue:[NSNumber numberWithFloat:v]
+               forKeyPath:@"emitterCells.fire2.scale"];
 }
 
 - (void)setLifetimeRange:(float)v
 {
     [fireEmitter setValue:[NSNumber numberWithFloat:v]
                forKeyPath:@"emitterCells.fire.lifetimeRange"];
+    [fireEmitter setValue:[NSNumber numberWithFloat:v * 0.25]
+               forKeyPath:@"emitterCells.fire2.lifetimeRange"];
 }
 
 - (void)setXAccel:(float)v
 {
     [fireEmitter setValue:[NSNumber numberWithFloat:v]
                forKeyPath:@"emitterCells.fire.xAcceleration"];
+    [fireEmitter setValue:[NSNumber numberWithFloat:v]
+               forKeyPath:@"emitterCells.fire2.xAcceleration"];
 }
 
 - (void)setZAccel:(float)v
 {
     [fireEmitter setValue:[NSNumber numberWithFloat:v]
                forKeyPath:@"emitterCells.fire.zAcceleration"];
+    [fireEmitter setValue:[NSNumber numberWithFloat:v]
+               forKeyPath:@"emitterCells.fire2.zAcceleration"];
 }
 
 
@@ -387,20 +416,23 @@
     }
 }
 
-- (void)setRenderMode:(DWFMode)mode
+- (void)setRenderMode:(DWFRenderMode)mode
 {
     switch (mode) {
-        case DWFModePoints:
-            [fireEmitter setRenderMode:kCAEmitterLayerPoints];
+        case DWFRenderModeUndordered:
+            [fireEmitter setRenderMode:kCAEmitterLayerUnordered];
             break;
-        case DWFModeOutline:
-            [fireEmitter setRenderMode:kCAEmitterLayerOutline];
+        case DWFRenderModeOldestFirst:
+            [fireEmitter setRenderMode:kCAEmitterLayerOldestFirst];
             break;
-        case DWFModeSurface:
-            [fireEmitter setRenderMode:kCAEmitterLayerSurface];
+        case DWFRenderModeOldestLast:
+            [fireEmitter setRenderMode:kCAEmitterLayerOldestLast];
             break;
-        case DWFModeVolume:
-            [fireEmitter setRenderMode:kCAEmitterLayerVolume];
+        case DWFRenderModeBackToFront:
+            [fireEmitter setRenderMode:kCAEmitterLayerBackToFront];
+            break;
+        case DWFRenderModeAdditive:
+            [fireEmitter setRenderMode:kCAEmitterLayerAdditive];
             break;
         default:
             break;

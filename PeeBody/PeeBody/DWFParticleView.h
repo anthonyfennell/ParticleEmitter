@@ -9,14 +9,22 @@
 #import <UIKit/UIKit.h>
 
 
-typedef NS_ENUM (NSUInteger, DWFMode){
+typedef NS_ENUM (NSUInteger, DWFMode) {
     DWFModePoints,
     DWFModeOutline,
     DWFModeSurface,
     DWFModeVolume
 };
 
-typedef NS_ENUM (NSUInteger, DWFShape){
+typedef NS_ENUM(NSUInteger, DWFRenderMode) {
+    DWFRenderModeUndordered,
+    DWFRenderModeOldestFirst,
+    DWFRenderModeOldestLast,
+    DWFRenderModeBackToFront,
+    DWFRenderModeAdditive
+};
+
+typedef NS_ENUM (NSUInteger, DWFShape) {
     DWFShapePoint,
     DWFShapeLine,
     DWFShapeRectangle,
@@ -24,6 +32,8 @@ typedef NS_ENUM (NSUInteger, DWFShape){
     DWFShapeCircle,
     DWFShapeSphere
 };
+
+
 
 @interface DWFParticleView : UIView
 
@@ -57,7 +67,7 @@ typedef NS_ENUM (NSUInteger, DWFShape){
 
 
 - (void)setEmitterMode:(DWFMode)mode;
-- (void)setRenderMode:(DWFMode)mode;
+- (void)setRenderMode:(DWFRenderMode)mode;
 - (void)setShape:(DWFShape)shape;
 
 - (void)burnDownLine;

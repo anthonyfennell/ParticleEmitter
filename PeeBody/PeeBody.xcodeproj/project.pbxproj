@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		496FE7F51B680D320085BA64 /* DWFParticleGravityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 496FE7F41B680D320085BA64 /* DWFParticleGravityView.m */; };
+		496FE7F81B680FE40085BA64 /* DWFGravityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496FE7F71B680FE40085BA64 /* DWFGravityViewController.m */; };
 		49B8D2FB1B4AC3CD0018DBDA /* OSTrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B8D2FA1B4AC3CD0018DBDA /* OSTrayViewController.m */; };
 		49B8D2FE1B4AC9350018DBDA /* UIView+Position.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B8D2FD1B4AC9350018DBDA /* UIView+Position.m */; };
 		49DAA1441B595688003831F2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49DAA1461B595688003831F2 /* Localizable.strings */; };
@@ -44,7 +46,6 @@
 		49EE58101B666B3100B30242 /* DWFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EE580F1B666B3100B30242 /* DWFViewController.m */; };
 		49EE58121B66806700B30242 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EE58111B66806700B30242 /* QuartzCore.framework */; };
 		49EE58141B66809E00B30242 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EE58131B66809E00B30242 /* CoreFoundation.framework */; };
-		49F141CB1B66A69E0036C79D /* UISlider+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F141CA1B66A69E0036C79D /* UISlider+Util.m */; };
 		49F141D61B66C17D0036C79D /* ASValuePopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F141D31B66C17D0036C79D /* ASValuePopUpView.m */; };
 		49F141D71B66C17D0036C79D /* ASValueTrackingSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F141D51B66C17D0036C79D /* ASValueTrackingSlider.m */; };
 		49F5E6E71B1CD5F00094278C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F5E6E61B1CD5F00094278C /* main.m */; };
@@ -96,6 +97,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		496FE7F31B680D320085BA64 /* DWFParticleGravityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWFParticleGravityView.h; sourceTree = "<group>"; };
+		496FE7F41B680D320085BA64 /* DWFParticleGravityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWFParticleGravityView.m; sourceTree = "<group>"; };
+		496FE7F61B680FE40085BA64 /* DWFGravityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWFGravityViewController.h; sourceTree = "<group>"; };
+		496FE7F71B680FE40085BA64 /* DWFGravityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWFGravityViewController.m; sourceTree = "<group>"; };
 		49B8D2F91B4AC3CD0018DBDA /* OSTrayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSTrayViewController.h; sourceTree = "<group>"; };
 		49B8D2FA1B4AC3CD0018DBDA /* OSTrayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSTrayViewController.m; sourceTree = "<group>"; };
 		49B8D2FC1B4AC9350018DBDA /* UIView+Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Position.h"; sourceTree = "<group>"; };
@@ -151,8 +156,6 @@
 		49EE580F1B666B3100B30242 /* DWFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWFViewController.m; sourceTree = "<group>"; };
 		49EE58111B66806700B30242 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		49EE58131B66809E00B30242 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		49F141C91B66A69E0036C79D /* UISlider+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UISlider+Util.h"; path = "../UISlider+Util.h"; sourceTree = "<group>"; };
-		49F141CA1B66A69E0036C79D /* UISlider+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UISlider+Util.m"; path = "../UISlider+Util.m"; sourceTree = "<group>"; };
 		49F141D21B66C17D0036C79D /* ASValuePopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValuePopUpView.h; sourceTree = "<group>"; };
 		49F141D31B66C17D0036C79D /* ASValuePopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASValuePopUpView.m; sourceTree = "<group>"; };
 		49F141D41B66C17D0036C79D /* ASValueTrackingSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValueTrackingSlider.h; sourceTree = "<group>"; };
@@ -251,10 +254,12 @@
 			children = (
 				49EE580B1B666A8300B30242 /* DWFParticleView.h */,
 				49EE580C1B666A8300B30242 /* DWFParticleView.m */,
+				496FE7F31B680D320085BA64 /* DWFParticleGravityView.h */,
+				496FE7F41B680D320085BA64 /* DWFParticleGravityView.m */,
 				49EE580E1B666B3100B30242 /* DWFViewController.h */,
 				49EE580F1B666B3100B30242 /* DWFViewController.m */,
-				49F141C91B66A69E0036C79D /* UISlider+Util.h */,
-				49F141CA1B66A69E0036C79D /* UISlider+Util.m */,
+				496FE7F61B680FE40085BA64 /* DWFGravityViewController.h */,
+				496FE7F71B680FE40085BA64 /* DWFGravityViewController.m */,
 				49F141D21B66C17D0036C79D /* ASValuePopUpView.h */,
 				49F141D31B66C17D0036C79D /* ASValuePopUpView.m */,
 				49F141D41B66C17D0036C79D /* ASValueTrackingSlider.h */,
@@ -562,12 +567,13 @@
 				49DAF1B71B223C45008C3C63 /* SBTabBarButton.m in Sources */,
 				49B8D2FB1B4AC3CD0018DBDA /* OSTrayViewController.m in Sources */,
 				49F5E7141B1DFD920094278C /* UIViewController+StatusBar.m in Sources */,
+				496FE7F81B680FE40085BA64 /* DWFGravityViewController.m in Sources */,
 				49B8D2FE1B4AC9350018DBDA /* UIView+Position.m in Sources */,
 				49DAF1901B21EC27008C3C63 /* OSTabBar.m in Sources */,
 				49EE58101B666B3100B30242 /* DWFViewController.m in Sources */,
 				49DAF18D1B21EC12008C3C63 /* OSTabBarController.m in Sources */,
 				49F141D71B66C17D0036C79D /* ASValueTrackingSlider.m in Sources */,
-				49F141CB1B66A69E0036C79D /* UISlider+Util.m in Sources */,
+				496FE7F51B680D320085BA64 /* DWFParticleGravityView.m in Sources */,
 				49DAF1931B21F2BE008C3C63 /* UIImage+Utils.m in Sources */,
 				49F141D61B66C17D0036C79D /* ASValuePopUpView.m in Sources */,
 				49F5E6ED1B1CD5F00094278C /* AFViewController.m in Sources */,
@@ -789,6 +795,7 @@
 				INFOPLIST_FILE = PeeBody/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9e0caa3a-cfb8-4c19-b16e-09742e917a09";
 			};
 			name = Debug;
 		};
@@ -799,6 +806,7 @@
 				INFOPLIST_FILE = PeeBody/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9e0caa3a-cfb8-4c19-b16e-09742e917a09";
 			};
 			name = Release;
 		};
