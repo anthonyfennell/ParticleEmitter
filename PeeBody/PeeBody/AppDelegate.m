@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+//    [Parse enableLocalDatastore];
+//    
+//    // Initialize Parse.
+//    [Parse setApplicationId:@"9z3gfU8lK5O6TFcVt4Gg5XwhDPSFW5xm2YAbLktC"
+//                  clientKey:@"C33ZEkgPQmxm3SALadhur0koSShUHsqGH22MkJqx"];
+//    
+//    // [Optional] Track statistics around application opens.
+//    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+//    
+//    
+//    [PFUser enableAutomaticUser];
+//    [[PFUser currentUser] incrementKey:@"RunCount"];
+//    [[PFUser currentUser] saveInBackground];
+//    
+//    PFUser *user = [PFUser currentUser];
+//    user.username = @"fatJesus";
+//    user.password = @"PFChangs";
+//    [user signUp];
+    
     return YES;
 }
 
