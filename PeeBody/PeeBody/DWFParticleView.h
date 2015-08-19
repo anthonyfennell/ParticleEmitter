@@ -33,9 +33,17 @@ typedef NS_ENUM (NSUInteger, DWFShape) {
     DWFShapeSphere
 };
 
+typedef NS_ENUM(NSUInteger, EmitCell) {
+    EmitCellSmoke = 0,
+    EmitCellTwo,
+    EmitCellThree,
+    EmitCellFour
+};
 
 
 @interface DWFParticleView : UIView
+
+@property (nonatomic, weak) CAEmitterCell *selectedCell;
 
 - (void)setEmitterPositionFromTouch:(UITouch *)t;
 - (void)setIsEmitting:(BOOL)isEmitting;
@@ -69,10 +77,8 @@ typedef NS_ENUM (NSUInteger, DWFShape) {
 - (void)setEmitterMode:(DWFMode)mode;
 - (void)setRenderMode:(DWFRenderMode)mode;
 - (void)setShape:(DWFShape)shape;
+- (void)selectEmitterCell:(EmitCell)cell;
 
-- (void)burnDownLine;
-
-- (void)showFire;
-- (void)hideFire;
+//- (void)burnDownLine;
 
 @end

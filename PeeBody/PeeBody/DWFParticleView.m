@@ -10,6 +10,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import <QuartzCore/CoreAnimation.h>
 
+
+
 @implementation DWFParticleView
 {
     CAEmitterLayer *fireEmitter;
@@ -20,27 +22,17 @@
     BOOL showFire;
     float fireBirthRate;
     float rocketBirthRate;
+    EmitCell editCell;
+    
+    CAEmitterCell *smoke;
+    CAEmitterCell *fire2;
+    CAEmitterCell *fire3;
+    CAEmitterCell *fire4;
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 - (void)awakeFromNib
 {
-    showFire = YES;
-    fireBirthRate = 0;
-    rocketBirthRate = 1;
-    fireworkGravity = [NSNumber numberWithInt:80];
-    fireworkVelocityRange = [NSNumber numberWithInt:20];
-    fireworkVelocity = [NSNumber numberWithInt:130];
-    fireworkRange = [NSNumber numberWithInt:8];
-    
-    
+    editCell = EmitCellSmoke;
     // set ref to the layer
     fireEmitter = (CAEmitterLayer*)self.layer;
     
@@ -53,141 +45,84 @@
     fireEmitter.emitterSize = CGSizeMake(50.0f, 50.0f);
     // Defines how the particle cells are rendered into the layer
     // Points, Outline, Surface, Volume
-    fireEmitter.renderMode = kCAEmitterLayerVolume;
+    fireEmitter.renderMode = kCAEmitterLayerOldestLast;
     // Emitter modes: Points, Outline, Surface, Volume
     fireEmitter.emitterMode = kCAEmitterLayerAdditive;
     // Defines whether the layer flattens the particles into its pane.
     fireEmitter.preservesDepth = YES;
     
-    CAEmitterCell *fire = [CAEmitterCell emitterCell];
-    fire.birthRate = 250;
-    fire.lifetime = 2.0;
-    fire.lifetimeRange = 0.5;
-    fire.color = [[UIColor colorWithRed:0.8 green:0.4 blue:0.2 alpha:0.1] CGColor];
-    fire.contents = (id)[[UIImage imageNamed:@"particlesFire1"] CGImage];
-    fire.velocity = 26;
-    //fire.velocityRange = 20;
-    fire.yAcceleration = 2;
-    fire.emissionRange = M_PI_2;
-    fire.scaleSpeed = 0.3;
-    fire.spin = 0.5;
-    fire.redRange = 0.5;
-    fire.blueRange = 0.15;
-    fire.greenRange = 0.2;
-    fire.redSpeed = 0.5;
+    smoke = [CAEmitterCell emitterCell];
+    smoke.birthRate = 10;
+    smoke.lifetime = 6.0;
+    smoke.lifetimeRange = 2.0;
+    smoke.color = [[UIColor colorWithWhite:0.75 alpha:0.1] CGColor];
+    smoke.contents = (id)[[UIImage imageNamed:@"fireTexture3"] CGImage];
+    smoke.velocity = 12;
+    smoke.velocityRange = 5;
+    smoke.yAcceleration = -15;
+    smoke.xAcceleration = 4;
+    smoke.emissionRange = M_PI_2;
+    smoke.scaleSpeed = 0.2;
+    smoke.spin = 1.0;
+    smoke.scale = 0.3;
+    [smoke setName:@"smoke"];
     
-    [fire setName:@"fire"];
-    
-    CAEmitterCell *fire2 = [CAEmitterCell emitterCell];
-    fire2.birthRate = 250;
-    fire2.lifetime = 0.2;
-    fire2.lifetimeRange = 0.75;
-    fire2.color = [[UIColor colorWithRed:238/255.0 green:232/255.0 blue:154/255.0 alpha:0.1] CGColor];
-    fire2.contents = (id)[[UIImage imageNamed:@"particlesFire1"] CGImage];
-    fire2.velocity = 10;
-    fire2.velocityRange = 5;
-    fire2.yAcceleration = 2;
+    fire2 = [CAEmitterCell emitterCell];
+    fire2.birthRate = 40;
+    fire2.lifetime = 1.5;
+    fire2.lifetimeRange = 0.7;
+    fire2.color = [[UIColor colorWithRed:0.8 green:0.4 blue:0.2 alpha:0.1] CGColor];
+    fire2.contents = (id)[[UIImage imageNamed:@"fireTexture2"] CGImage];
+    fire2.velocity = 26;
+    fire2.velocityRange = 10;
+    fire2.yAcceleration = -25;
+    fire2.xAcceleration = 5;
     fire2.emissionRange = M_PI_2;
-    fire2.scaleSpeed = 0.3;
-    fire2.spin = 0.5;
+    fire2.scaleSpeed = 0.1;
+    fire2.spin = 0.1;
+    fire2.scale = 0.3;
     
     [fire2 setName:@"fire2"];
     
+    fire3 = [CAEmitterCell emitterCell];
+    fire3.birthRate = 30;
+    fire3.lifetime = 1.5;
+    fire3.lifetimeRange = 0.7;
+    fire3.color = [[UIColor colorWithRed:0.8 green:0.4 blue:0.2 alpha:0.1] CGColor];
+    fire3.contents = (id)[[UIImage imageNamed:@"fireTexture4"] CGImage];
+    fire3.velocity = 26;
+    fire3.velocityRange = 10;
+    fire3.yAcceleration = -25;
+    fire3.xAcceleration = 5;
+    fire3.emissionRange = M_PI_2;
+    fire3.scaleSpeed = 0.1;
+    fire3.spin = 0.1;
+    fire3.scale = 0.3;
     
+    [fire3 setName:@"fire3"];
     
+    fire4 = [CAEmitterCell emitterCell];
+    fire4.birthRate = 20;
+    fire4.lifetime = 1.5;
+    fire4.lifetimeRange = 0.7;
+    fire4.color = [[UIColor colorWithRed:0.8 green:0.4 blue:0.2 alpha:0.1] CGColor];
+    fire4.contents = (id)[[UIImage imageNamed:@"fireTexture3"] CGImage];
+    fire4.velocity = 12;
+    fire4.velocityRange = 10;
+    fire4.yAcceleration = -25;
+    fire4.xAcceleration = 5;
+    fire4.emissionRange = M_PI_2;
+    fire4.scale = 0.1;
+    fire4.spin = 0.1;
+    fire4.scale = 0.3;
     
-    UIColor *redColor = [UIColor redColor];
-    
-    //Invisible particle representing the rocket before the explosion
-    CAEmitterCell *rocket = [CAEmitterCell emitterCell];
-    rocket.emissionLongitude = M_PI / 2;
-    rocket.emissionLatitude = 0;
-    rocket.lifetime = 1.6;
-    rocket.birthRate = 0;
-    rocket.velocity = 400;
-    rocket.velocityRange = 100;
-    rocket.yAcceleration = -250;
-    rocket.emissionRange = M_PI / 4;
-    //color = CGColorCreateGenericRGB(0.5, 0.5, 0.5, 0.5);
-    //rocket.color = color;
-    //CGColorRelease(color);
-    rocket.color = redColor.CGColor;
-    rocket.redRange = 0.5;
-    rocket.greenRange = 0.5;
-    rocket.blueRange = 0.5;
-    
-    //Name the cell so that it can be animated later using keypath
-    [rocket setName:@"rocket"];
-    
-    //Flare particles emitted from the rocket as it flys
-    CAEmitterCell *flare = [CAEmitterCell emitterCell];
-    //flare.contents = img;
-    flare.emissionLongitude = (4 * M_PI) / 2;
-    flare.scale = 0.4;
-    flare.velocity = 100;
-    flare.birthRate = 45;
-    flare.lifetime = 1.5;
-    flare.yAcceleration = -350;
-    flare.emissionRange = M_PI / 7;
-    flare.alphaSpeed = -0.7;
-    flare.scaleSpeed = -0.1;
-    flare.scaleRange = 0.1;
-    flare.beginTime = 0.01;
-    flare.duration = 0.7;
-    flare.color = redColor.CGColor;
-    
-    //The particles that make up the explosion
-    CAEmitterCell *firework = [CAEmitterCell emitterCell];
-    firework.contents = (id)[[UIImage imageNamed:@"particlesFire1"] CGImage];
-    firework.birthRate = 200;
-    firework.scale = 0.6;
-    firework.velocity = 130;
-    firework.lifetime = 2;
-    firework.alphaSpeed = -0.2;
-    firework.yAcceleration = -80;
-    firework.beginTime = 1.5;
-    firework.duration = 0.1;
-    firework.emissionRange = 2 * M_PI;
-    firework.scaleSpeed = -0.1;
-    firework.spin = 2;
-    firework.color = redColor.CGColor;
-    
-    //Name the cell so that it can be animated later using keypath
-    [firework setName:@"firework"];
-    
-    //preSpark is an invisible particle used to later emit the spark
-    CAEmitterCell *preSpark = [CAEmitterCell emitterCell];
-    preSpark.birthRate = 80;
-    preSpark.velocity = firework.velocity * 0.70;
-    preSpark.lifetime = 1.7;
-    preSpark.yAcceleration = firework.yAcceleration * 0.85;
-    preSpark.beginTime = firework.beginTime - 0.2;
-    preSpark.emissionRange = firework.emissionRange;
-    preSpark.greenSpeed = 100;
-    preSpark.blueSpeed = 100;
-    preSpark.redSpeed = 100;
-    preSpark.color = redColor.CGColor;
-    
-    //Name the cell so that it can be animated later using keypath
-    [preSpark setName:@"preSpark"];
-    
-    //The 'sparkle' at the end of a firework
-    CAEmitterCell *spark = [CAEmitterCell emitterCell];
-    //spark.contents = img;
-    spark.lifetime = 0.05;
-    spark.yAcceleration = -250;
-    spark.beginTime = 0.8;
-    spark.scale = 0.4;
-    spark.birthRate = 10;
-
-    
-    
-    preSpark.emitterCells = @[spark];
-    rocket.emitterCells = @[flare, firework, preSpark];
-    
+    [fire4 setName:@"fire4"];
+    self.selectedCell = smoke;
+//    preSpark.emitterCells = @[spark];
+//    rocket.emitterCells = @[flare, firework, preSpark];
     
     //add the cell to the layer and we're done
-    fireEmitter.emitterCells = @[fire, fire2, rocket];
+    fireEmitter.emitterCells = @[smoke, fire2, fire3, fire4];
 }
 
 + (Class)layerClass
@@ -227,31 +162,10 @@
     group.animations = [NSArray arrayWithObject:ba];
     group.duration = 6;
     
-    
     [fireEmitter addAnimation:group forKey:nil];
 }
 
-- (void)showFire
-{
-    showFire = YES;
-    [fireEmitter setValue:[NSNumber numberWithFloat:0]
-                   forKeyPath:@"emitterCells.rocket.birthRate"];
-    [fireEmitter setValue:[NSNumber numberWithFloat:fireBirthRate]
-                   forKeyPath:@"emitterCells.fire.birthRate"];
-    [fireEmitter setValue:[NSNumber numberWithFloat:fireBirthRate]
-               forKeyPath:@"emitterCells.fire2.birthRate"];
-}
 
-- (void)hideFire
-{
-    showFire = NO;
-    [fireEmitter setValue:[NSNumber numberWithFloat:0]
-               forKeyPath:@"emitterCells.fire.birthRate"];
-    [fireEmitter setValue:[NSNumber numberWithFloat:0]
-               forKeyPath:@"emitterCells.fire2.birthRate"];
-    [fireEmitter setValue:[NSNumber numberWithFloat:rocketBirthRate]
-               forKeyPath:@"emitterCells.rocket.birthRate"];
-}
 
 - (void)setIsEmitting:(BOOL)isEmitting
 {
@@ -274,127 +188,107 @@
 //          forKeyPath:@"emitterCells.firework.yAcceleration"];
 }
 
+- (NSString *)emitterCellString
+{
+    NSString *cell;
+    switch (editCell) {
+        case EmitCellSmoke:
+            cell = @"smoke";
+            break;
+        case EmitCellTwo:
+            cell = @"fire2";
+            break;
+        case EmitCellThree:
+            cell = @"fire3";
+            break;
+        case EmitCellFour:
+            cell = @"fire4";
+            break;
+        default:
+            break;
+    }
+    
+    return cell;
+}
+
 - (void)setSpin:(float)v
 {
+    
     [fireEmitter setValue:[NSNumber numberWithFloat:v]
-            forKeyPath:@"emitterCells.fire.spin"];
-
+            forKeyPath:[NSString stringWithFormat:@"emitterCells.%@.spin", [self emitterCellString]]];
 }
 
 - (void)setYAccel:(float)v
 {
     [fireEmitter setValue:[NSNumber numberWithFloat:v]
-               forKeyPath:@"emitterCells.fire.yAcceleration"];
-    [fireEmitter setValue:[NSNumber numberWithFloat:v]
-               forKeyPath:@"emitterCells.fire2.yAcceleration"];
-    [fireEmitter setValue:[NSNumber numberWithFloat:v * 1]
-                forKeyPath:@"emitterCells.rocket.yAcceleration"];
-    [fireEmitter setValue:[NSNumber numberWithFloat:v * 0.85]
-                forKeyPath:@"emitterCells.rocket.emitterCells.preSpark.yAcceleration"];
-    [fireEmitter setValue:[NSNumber numberWithFloat:v * 1]
-                forKeyPath:@"emitterCells.rocket.emitterCells.firework.yAcceleration"];
+               forKeyPath:[NSString stringWithFormat:@"emitterCells.%@.yAcceleration", [self emitterCellString]]];
 }
 
 - (void)setEmissionRange:(float)v
 {
     [fireEmitter setValue:[NSNumber numberWithFloat:v * M_PI_4]
-               forKeyPath:@"emitterCells.fire.emissionRange"];
-    [fireEmitter setValue:[NSNumber numberWithFloat:v * M_PI_4 * 0.7]
-               forKeyPath:@"emitterCells.fire2.emissionRange"];
-    [fireEmitter setValue:[NSNumber numberWithFloat:v * M_PI_4]
-               forKeyPath:@"emitterCells.rocket.emitterCells.firework.emissionRange"];
-    [fireEmitter setValue:[NSNumber numberWithFloat:v * M_PI_4]
-               forKeyPath:@"emitterCells.rocket.emitterCells.preSpark.emissionRange"];
+               forKeyPath:[NSString stringWithFormat:@"emitterCells.%@.emissionRange", [self emitterCellString]]];
 }
 
 - (void)setVelocity:(float)v
 {
     [fireEmitter setValue:[NSNumber numberWithFloat:v]
-               forKeyPath:@"emitterCells.fire.velocity"];
-    [fireEmitter setValue:[NSNumber numberWithFloat:v * 0.7]
-               forKeyPath:@"emitterCells.fire2.velocity"];
-    [fireEmitter setValue:[NSNumber numberWithFloat:v]
-               forKeyPath:@"emitterCells.rocket.velocity"];
-    [fireEmitter setValue:[NSNumber numberWithFloat:v]
-               forKeyPath:@"emitterCells.rocket.emitterCells.firework.velocity"];
-    [fireEmitter setValue:[NSNumber numberWithFloat:v * 0.7]
-               forKeyPath:@"emitterCells.rocket.emitterCells.preSpark.velocity"];
+               forKeyPath:[NSString stringWithFormat:@"emitterCells.%@.velocity", [self emitterCellString]]];
 }
 
 - (void)setBirthRate:(float)v
 {
-    fireBirthRate = v;
-    if (showFire) {
-        [fireEmitter setValue:[NSNumber numberWithFloat:v]
-                   forKeyPath:@"emitterCells.fire.birthRate"];
-        [fireEmitter setValue:[NSNumber numberWithFloat:v * 0.7]
-                   forKeyPath:@"emitterCells.fire2.birthRate"];
-    }
+    [fireEmitter setValue:[NSNumber numberWithFloat:v]
+                forKeyPath:[NSString stringWithFormat:@"emitterCells.%@.birthRate", [self emitterCellString]]];
 }
 
 - (void)setScaleSpeed:(float)v
 {
     [fireEmitter setValue:[NSNumber numberWithFloat:v]
-               forKeyPath:@"emitterCells.fire.scaleSpeed"];
-    [fireEmitter setValue:[NSNumber numberWithFloat:v]
-               forKeyPath:@"emitterCells.fire2.scaleSpeed"];
+               forKeyPath:[NSString stringWithFormat:@"emitterCells.%@.scaleSpeed", [self emitterCellString]]];
 }
 
 - (void)setLifetime:(float)v
 {
     [fireEmitter setValue:[NSNumber numberWithFloat:v]
-               forKeyPath:@"emitterCells.fire.lifetime"];
-    [fireEmitter setValue:[NSNumber numberWithFloat:v * 0.3]
-               forKeyPath:@"emitterCells.fire2.lifetime"];
+               forKeyPath:[NSString stringWithFormat:@"emitterCells.%@.lifetime", [self emitterCellString]]];
 }
 
 - (void)setVelocityRange:(float)v
 {
     [fireEmitter setValue:[NSNumber numberWithFloat:v]
-               forKeyPath:@"emitterCells.fire.velocityRange"];
-    [fireEmitter setValue:[NSNumber numberWithFloat:v * 0.3]
-               forKeyPath:@"emitterCells.fire2.velocityRange"];
-    [fireEmitter setValue:[NSNumber numberWithFloat:v]
-               forKeyPath:@"emitterCells.rocket.velocityRange"];
-    [fireEmitter setValue:[NSNumber numberWithFloat:v]
-               forKeyPath:@"emitterCells.rocket.emitterCells.firework.velocityRange"];
+               forKeyPath:[NSString stringWithFormat:@"emitterCells.%@.velocityRange", [self emitterCellString]]];
 }
 
 - (void)setScale:(float)v
 {
     [fireEmitter setValue:[NSNumber numberWithFloat:v]
-               forKeyPath:@"emitterCells.fire.scale"];
-    [fireEmitter setValue:[NSNumber numberWithFloat:v]
-               forKeyPath:@"emitterCells.fire2.scale"];
+               forKeyPath:[NSString stringWithFormat:@"emitterCells.%@.scale", [self emitterCellString]]];
 }
 
 - (void)setLifetimeRange:(float)v
 {
     [fireEmitter setValue:[NSNumber numberWithFloat:v]
-               forKeyPath:@"emitterCells.fire.lifetimeRange"];
-    [fireEmitter setValue:[NSNumber numberWithFloat:v * 0.25]
-               forKeyPath:@"emitterCells.fire2.lifetimeRange"];
+               forKeyPath:[NSString stringWithFormat:@"emitterCells.%@.lifetimeRange", [self emitterCellString]]];
 }
 
 - (void)setXAccel:(float)v
 {
     [fireEmitter setValue:[NSNumber numberWithFloat:v]
-               forKeyPath:@"emitterCells.fire.xAcceleration"];
-    [fireEmitter setValue:[NSNumber numberWithFloat:v]
-               forKeyPath:@"emitterCells.fire2.xAcceleration"];
+               forKeyPath:[NSString stringWithFormat:@"emitterCells.%@.xAcceleration", [self emitterCellString]]];
 }
 
 - (void)setZAccel:(float)v
 {
     [fireEmitter setValue:[NSNumber numberWithFloat:v]
-               forKeyPath:@"emitterCells.fire.zAcceleration"];
-    [fireEmitter setValue:[NSNumber numberWithFloat:v]
-               forKeyPath:@"emitterCells.fire2.zAcceleration"];
+               forKeyPath:[NSString stringWithFormat:@"emitterCells.%@.zAcceleration", [self emitterCellString]]];
 }
 
 
 
 
+
+/* Edit the emitter cell */
 
 - (void)setEmitterMode:(DWFMode)mode
 {
@@ -465,20 +359,31 @@
     }
 }
 
+- (void)selectEmitterCell:(EmitCell)cell
+{
+    switch (cell) {
+        case EmitCellSmoke:
+            editCell = EmitCellSmoke;
+            self.selectedCell = smoke;
+            break;
+        case EmitCellTwo:
+            editCell = EmitCellTwo;
+            self.selectedCell = fire2;
+            break;
+        case EmitCellThree:
+            editCell = EmitCellThree;
+            self.selectedCell = fire3;
+            break;
+        case EmitCellFour:
+            editCell = EmitCellFour;
+            self.selectedCell = fire4;
+            break;
+        default:
+            break;
+    }
+}
+
 @end
-
-
-//fire2.birthRate = 0;
-//fire2.lifetime = 5.0;
-//fire2.lifetimeRange = 0.5;
-//fire2.color = [[UIColor colorWithRed:228/255.0 green:237/255.0 blue:47/255.0 alpha:1.0] CGColor];
-//fire2.contents = (id)[[UIImage imageNamed:@"particlesFire1"] CGImage];
-//fire2.velocity = 10;
-//fire2.velocityRange = 10;
-//fire2.yAcceleration = 2;
-//fire2.emissionRange = M_PI_2;
-//fire2.scaleSpeed = 0.3;
-//fire2.spin = 0.5;
 
 
 
