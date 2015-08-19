@@ -7,11 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		491EE9DE1B73AA0100319C96 /* speakerIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 491EE9E01B73AA0100319C96 /* speakerIcon1.png */; };
+		4951B7BE1B7D2F2300EAC586 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4951B7BD1B7D2F2300EAC586 /* Parse.framework */; };
+		4951B7C01B7D2F4600EAC586 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4951B7BF1B7D2F4600EAC586 /* Bolts.framework */; };
+		4951B7C21B7D2F7100EAC586 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4951B7C11B7D2F7100EAC586 /* AudioToolbox.framework */; };
+		4951B7C41B7D2F7500EAC586 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4951B7C31B7D2F7500EAC586 /* CFNetwork.framework */; };
+		4951B7C61B7D2F7E00EAC586 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4951B7C51B7D2F7E00EAC586 /* CoreGraphics.framework */; };
+		4951B7C81B7D2F8A00EAC586 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4951B7C71B7D2F8A00EAC586 /* CoreLocation.framework */; };
+		4951B7CA1B7D2FA400EAC586 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4951B7C91B7D2FA400EAC586 /* Security.framework */; };
+		4951B7CE1B7D2FB900EAC586 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4951B7CD1B7D2FB900EAC586 /* SystemConfiguration.framework */; };
+		4951B7D01B7D2FC200EAC586 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4951B7CF1B7D2FC200EAC586 /* libz.dylib */; };
+		4951B7D21B7D2FCE00EAC586 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4951B7D11B7D2FCE00EAC586 /* libsqlite3.dylib */; };
+		4951B7D41B7D2FF800EAC586 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4951B7D31B7D2FF800EAC586 /* Accounts.framework */; };
+		496EC5F31B7000160087FFD9 /* DWFMultipleParticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496EC5F21B7000160087FFD9 /* DWFMultipleParticleViewController.m */; };
 		496FE7F51B680D320085BA64 /* DWFParticleGravityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 496FE7F41B680D320085BA64 /* DWFParticleGravityView.m */; };
 		496FE7F81B680FE40085BA64 /* DWFGravityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496FE7F71B680FE40085BA64 /* DWFGravityViewController.m */; };
 		49B8D2FB1B4AC3CD0018DBDA /* OSTrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B8D2FA1B4AC3CD0018DBDA /* OSTrayViewController.m */; };
 		49B8D2FE1B4AC9350018DBDA /* UIView+Position.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B8D2FD1B4AC9350018DBDA /* UIView+Position.m */; };
-		49DAA1441B595688003831F2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49DAA1461B595688003831F2 /* Localizable.strings */; };
 		49DAA1491B595912003831F2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49DAA1461B595688003831F2 /* Localizable.strings */; };
 		49DAF18D1B21EC12008C3C63 /* OSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DAF18C1B21EC12008C3C63 /* OSTabBarController.m */; };
 		49DAF1901B21EC27008C3C63 /* OSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DAF18F1B21EC27008C3C63 /* OSTabBar.m */; };
@@ -21,7 +33,6 @@
 		49DAF1A61B222D3C008C3C63 /* videoIcon1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF1961B222D3C008C3C63 /* videoIcon1@2x.png */; };
 		49DAF1A71B222D3C008C3C63 /* menuIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF1971B222D3C008C3C63 /* menuIcon1.png */; };
 		49DAF1A81B222D3C008C3C63 /* sideButtonIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF1981B222D3C008C3C63 /* sideButtonIcon1.png */; };
-		49DAF1A91B222D3C008C3C63 /* speakerIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF1991B222D3C008C3C63 /* speakerIcon1.png */; };
 		49DAF1AA1B222D3C008C3C63 /* twitterIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF19A1B222D3C008C3C63 /* twitterIcon1.png */; };
 		49DAF1AB1B222D3C008C3C63 /* magazineIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF19B1B222D3C008C3C63 /* magazineIcon1.png */; };
 		49DAF1AC1B222D3C008C3C63 /* playIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF19C1B222D3C008C3C63 /* playIcon1.png */; };
@@ -33,15 +44,6 @@
 		49DAF1B21B222D3C008C3C63 /* backArrow1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF1A21B222D3C008C3C63 /* backArrow1.png */; };
 		49DAF1B31B222D3C008C3C63 /* forwardArrow1.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DAF1A31B222D3C008C3C63 /* forwardArrow1.png */; };
 		49DAF1B71B223C45008C3C63 /* SBTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DAF1B61B223C45008C3C63 /* SBTabBarButton.m */; };
-		49E071A31B3C981C00D6FF43 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E071A21B3C981C00D6FF43 /* InterfaceController.m */; };
-		49E071A61B3C981C00D6FF43 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E071A51B3C981C00D6FF43 /* NotificationController.m */; };
-		49E071A91B3C981C00D6FF43 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E071A81B3C981C00D6FF43 /* GlanceController.m */; };
-		49E071AB1B3C981C00D6FF43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E071AA1B3C981C00D6FF43 /* Images.xcassets */; };
-		49E071AF1B3C981C00D6FF43 /* PeeBody WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 49E071AE1B3C981C00D6FF43 /* PeeBody WatchKit App.app */; };
-		49E071B71B3C981C00D6FF43 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49E071B51B3C981C00D6FF43 /* Interface.storyboard */; };
-		49E071B91B3C981C00D6FF43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E071B81B3C981C00D6FF43 /* Images.xcassets */; };
-		49E071BC1B3C981C00D6FF43 /* PeeBody WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 49E0719C1B3C981C00D6FF43 /* PeeBody WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		49E071C61B3D852000D6FF43 /* SecondInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E071C51B3D852000D6FF43 /* SecondInterfaceController.m */; };
 		49EE580D1B666A8300B30242 /* DWFParticleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EE580C1B666A8300B30242 /* DWFParticleView.m */; };
 		49EE58101B666B3100B30242 /* DWFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EE580F1B666B3100B30242 /* DWFViewController.m */; };
 		49EE58121B66806700B30242 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EE58111B66806700B30242 /* QuartzCore.framework */; };
@@ -59,20 +61,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		49E071B01B3C981C00D6FF43 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 49F5E6D91B1CD5F00094278C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 49E071AD1B3C981C00D6FF43;
-			remoteInfo = "PeeBody WatchKit App";
-		};
-		49E071BA1B3C981C00D6FF43 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 49F5E6D91B1CD5F00094278C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 49E0719B1B3C981C00D6FF43;
-			remoteInfo = "PeeBody WatchKit Extension";
-		};
 		49F5E6FB1B1CD5F00094278C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 49F5E6D91B1CD5F00094278C /* Project object */;
@@ -89,7 +77,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				49E071BC1B3C981C00D6FF43 /* PeeBody WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +84,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		491EE9DD1B73A7CF00319C96 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = ../Prefix.pch; sourceTree = "<group>"; };
+		491EE9DF1B73AA0100319C96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = Base.lproj/speakerIcon1.png; sourceTree = "<group>"; };
+		491EE9E11B73AA0400319C96 /* es */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = es; path = es.lproj/speakerIcon1.png; sourceTree = "<group>"; };
+		4951B7BD1B7D2F2300EAC586 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		4951B7BF1B7D2F4600EAC586 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		4951B7C11B7D2F7100EAC586 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4951B7C31B7D2F7500EAC586 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		4951B7C51B7D2F7E00EAC586 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4951B7C71B7D2F8A00EAC586 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4951B7C91B7D2FA400EAC586 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4951B7CD1B7D2FB900EAC586 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4951B7CF1B7D2FC200EAC586 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		4951B7D11B7D2FCE00EAC586 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		4951B7D31B7D2FF800EAC586 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		496EC5F11B7000160087FFD9 /* DWFMultipleParticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWFMultipleParticleViewController.h; sourceTree = "<group>"; };
+		496EC5F21B7000160087FFD9 /* DWFMultipleParticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWFMultipleParticleViewController.m; sourceTree = "<group>"; };
 		496FE7F31B680D320085BA64 /* DWFParticleGravityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWFParticleGravityView.h; sourceTree = "<group>"; };
 		496FE7F41B680D320085BA64 /* DWFParticleGravityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWFParticleGravityView.m; sourceTree = "<group>"; };
 		496FE7F61B680FE40085BA64 /* DWFGravityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWFGravityViewController.h; sourceTree = "<group>"; };
@@ -121,7 +124,6 @@
 		49DAF1961B222D3C008C3C63 /* videoIcon1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "videoIcon1@2x.png"; sourceTree = "<group>"; };
 		49DAF1971B222D3C008C3C63 /* menuIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuIcon1.png; sourceTree = "<group>"; };
 		49DAF1981B222D3C008C3C63 /* sideButtonIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sideButtonIcon1.png; sourceTree = "<group>"; };
-		49DAF1991B222D3C008C3C63 /* speakerIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speakerIcon1.png; sourceTree = "<group>"; };
 		49DAF19A1B222D3C008C3C63 /* twitterIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterIcon1.png; sourceTree = "<group>"; };
 		49DAF19B1B222D3C008C3C63 /* magazineIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magazineIcon1.png; sourceTree = "<group>"; };
 		49DAF19C1B222D3C008C3C63 /* playIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playIcon1.png; sourceTree = "<group>"; };
@@ -134,7 +136,6 @@
 		49DAF1A31B222D3C008C3C63 /* forwardArrow1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forwardArrow1.png; sourceTree = "<group>"; };
 		49DAF1B51B223C45008C3C63 /* SBTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTabBarButton.h; sourceTree = "<group>"; };
 		49DAF1B61B223C45008C3C63 /* SBTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTabBarButton.m; sourceTree = "<group>"; };
-		49E0719C1B3C981C00D6FF43 /* PeeBody WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PeeBody WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E0719F1B3C981C00D6FF43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49E071A01B3C981C00D6FF43 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		49E071A11B3C981C00D6FF43 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
@@ -144,7 +145,6 @@
 		49E071A71B3C981C00D6FF43 /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
 		49E071A81B3C981C00D6FF43 /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
 		49E071AA1B3C981C00D6FF43 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		49E071AE1B3C981C00D6FF43 /* PeeBody WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PeeBody WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E071B41B3C981C00D6FF43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49E071B61B3C981C00D6FF43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		49E071B81B3C981C00D6FF43 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -178,19 +178,23 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		49E071991B3C981C00D6FF43 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		49F5E6DE1B1CD5F00094278C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49EE58141B66809E00B30242 /* CoreFoundation.framework in Frameworks */,
+				4951B7D41B7D2FF800EAC586 /* Accounts.framework in Frameworks */,
+				4951B7D21B7D2FCE00EAC586 /* libsqlite3.dylib in Frameworks */,
+				4951B7D01B7D2FC200EAC586 /* libz.dylib in Frameworks */,
+				4951B7CE1B7D2FB900EAC586 /* SystemConfiguration.framework in Frameworks */,
+				4951B7CA1B7D2FA400EAC586 /* Security.framework in Frameworks */,
 				49EE58121B66806700B30242 /* QuartzCore.framework in Frameworks */,
+				4951B7C81B7D2F8A00EAC586 /* CoreLocation.framework in Frameworks */,
+				4951B7C61B7D2F7E00EAC586 /* CoreGraphics.framework in Frameworks */,
+				4951B7C41B7D2F7500EAC586 /* CFNetwork.framework in Frameworks */,
+				4951B7C21B7D2F7100EAC586 /* AudioToolbox.framework in Frameworks */,
+				49EE58141B66809E00B30242 /* CoreFoundation.framework in Frameworks */,
+				4951B7BE1B7D2F2300EAC586 /* Parse.framework in Frameworks */,
+				4951B7C01B7D2F4600EAC586 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +264,8 @@
 				49EE580F1B666B3100B30242 /* DWFViewController.m */,
 				496FE7F61B680FE40085BA64 /* DWFGravityViewController.h */,
 				496FE7F71B680FE40085BA64 /* DWFGravityViewController.m */,
+				496EC5F11B7000160087FFD9 /* DWFMultipleParticleViewController.h */,
+				496EC5F21B7000160087FFD9 /* DWFMultipleParticleViewController.m */,
 				49F141D21B66C17D0036C79D /* ASValuePopUpView.h */,
 				49F141D31B66C17D0036C79D /* ASValuePopUpView.m */,
 				49F141D41B66C17D0036C79D /* ASValueTrackingSlider.h */,
@@ -276,7 +282,7 @@
 				49DAF1961B222D3C008C3C63 /* videoIcon1@2x.png */,
 				49DAF1971B222D3C008C3C63 /* menuIcon1.png */,
 				49DAF1981B222D3C008C3C63 /* sideButtonIcon1.png */,
-				49DAF1991B222D3C008C3C63 /* speakerIcon1.png */,
+				491EE9E01B73AA0100319C96 /* speakerIcon1.png */,
 				49DAF19A1B222D3C008C3C63 /* twitterIcon1.png */,
 				49DAF19B1B222D3C008C3C63 /* magazineIcon1.png */,
 				49DAF19C1B222D3C008C3C63 /* playIcon1.png */,
@@ -294,8 +300,19 @@
 		49F5E6D81B1CD5F00094278C = {
 			isa = PBXGroup;
 			children = (
+				4951B7D31B7D2FF800EAC586 /* Accounts.framework */,
+				4951B7D11B7D2FCE00EAC586 /* libsqlite3.dylib */,
+				4951B7CF1B7D2FC200EAC586 /* libz.dylib */,
+				4951B7CD1B7D2FB900EAC586 /* SystemConfiguration.framework */,
+				4951B7C91B7D2FA400EAC586 /* Security.framework */,
+				4951B7C71B7D2F8A00EAC586 /* CoreLocation.framework */,
+				4951B7C51B7D2F7E00EAC586 /* CoreGraphics.framework */,
+				4951B7C31B7D2F7500EAC586 /* CFNetwork.framework */,
+				4951B7C11B7D2F7100EAC586 /* AudioToolbox.framework */,
+				4951B7BF1B7D2F4600EAC586 /* Bolts.framework */,
 				49EE58131B66809E00B30242 /* CoreFoundation.framework */,
 				49EE58111B66806700B30242 /* QuartzCore.framework */,
+				4951B7BD1B7D2F2300EAC586 /* Parse.framework */,
 				49F5E6E31B1CD5F00094278C /* PeeBody */,
 				49F5E6FD1B1CD5F00094278C /* PeeBodyTests */,
 				49E0719D1B3C981C00D6FF43 /* PeeBody WatchKit Extension */,
@@ -309,8 +326,6 @@
 			children = (
 				49F5E6E11B1CD5F00094278C /* PeeBody.app */,
 				49F5E6FA1B1CD5F00094278C /* PeeBodyTests.xctest */,
-				49E0719C1B3C981C00D6FF43 /* PeeBody WatchKit Extension.appex */,
-				49E071AE1B3C981C00D6FF43 /* PeeBody WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -349,6 +364,7 @@
 		49F5E6E41B1CD5F00094278C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				491EE9DD1B73A7CF00319C96 /* Prefix.pch */,
 				49F5E6E51B1CD5F00094278C /* Info.plist */,
 				49F5E6E61B1CD5F00094278C /* main.m */,
 			);
@@ -375,42 +391,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		49E0719B1B3C981C00D6FF43 /* PeeBody WatchKit Extension */ = {
+		49F5E6E01B1CD5F00094278C /* ParticleEmitter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 49E071C01B3C981C00D6FF43 /* Build configuration list for PBXNativeTarget "PeeBody WatchKit Extension" */;
-			buildPhases = (
-				49E071981B3C981C00D6FF43 /* Sources */,
-				49E071991B3C981C00D6FF43 /* Frameworks */,
-				49E0719A1B3C981C00D6FF43 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				49E071B11B3C981C00D6FF43 /* PBXTargetDependency */,
-			);
-			name = "PeeBody WatchKit Extension";
-			productName = "PeeBody WatchKit Extension";
-			productReference = 49E0719C1B3C981C00D6FF43 /* PeeBody WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit-extension";
-		};
-		49E071AD1B3C981C00D6FF43 /* PeeBody WatchKit App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 49E071BD1B3C981C00D6FF43 /* Build configuration list for PBXNativeTarget "PeeBody WatchKit App" */;
-			buildPhases = (
-				49E071AC1B3C981C00D6FF43 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "PeeBody WatchKit App";
-			productName = "PeeBody WatchKit App";
-			productReference = 49E071AE1B3C981C00D6FF43 /* PeeBody WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp";
-		};
-		49F5E6E01B1CD5F00094278C /* PeeBody */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 49F5E7041B1CD5F00094278C /* Build configuration list for PBXNativeTarget "PeeBody" */;
+			buildConfigurationList = 49F5E7041B1CD5F00094278C /* Build configuration list for PBXNativeTarget "ParticleEmitter" */;
 			buildPhases = (
 				49F5E6DD1B1CD5F00094278C /* Sources */,
 				49F5E6DE1B1CD5F00094278C /* Frameworks */,
@@ -420,9 +403,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				49E071BB1B3C981C00D6FF43 /* PBXTargetDependency */,
 			);
-			name = PeeBody;
+			name = ParticleEmitter;
 			productName = PeeBody;
 			productReference = 49F5E6E11B1CD5F00094278C /* PeeBody.app */;
 			productType = "com.apple.product-type.application";
@@ -454,14 +436,14 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Outside Source Design";
 				TargetAttributes = {
-					49E0719B1B3C981C00D6FF43 = {
-						CreatedOnToolsVersion = 6.3.2;
-					};
-					49E071AD1B3C981C00D6FF43 = {
-						CreatedOnToolsVersion = 6.3.2;
-					};
 					49F5E6E01B1CD5F00094278C = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = D5X9748W4P;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					49F5E6F91B1CD5F00094278C = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -483,34 +465,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				49F5E6E01B1CD5F00094278C /* PeeBody */,
+				49F5E6E01B1CD5F00094278C /* ParticleEmitter */,
 				49F5E6F91B1CD5F00094278C /* PeeBodyTests */,
-				49E0719B1B3C981C00D6FF43 /* PeeBody WatchKit Extension */,
-				49E071AD1B3C981C00D6FF43 /* PeeBody WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		49E0719A1B3C981C00D6FF43 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				49E071AB1B3C981C00D6FF43 /* Images.xcassets in Resources */,
-				49DAA1441B595688003831F2 /* Localizable.strings in Resources */,
-				49E071AF1B3C981C00D6FF43 /* PeeBody WatchKit App.app in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		49E071AC1B3C981C00D6FF43 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				49E071B71B3C981C00D6FF43 /* Interface.storyboard in Resources */,
-				49E071B91B3C981C00D6FF43 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		49F5E6DF1B1CD5F00094278C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -522,7 +483,7 @@
 				49F5E6F51B1CD5F00094278C /* LaunchScreen.xib in Resources */,
 				49DAA1491B595912003831F2 /* Localizable.strings in Resources */,
 				49DAF1B21B222D3C008C3C63 /* backArrow1.png in Resources */,
-				49DAF1A91B222D3C008C3C63 /* speakerIcon1.png in Resources */,
+				491EE9DE1B73AA0100319C96 /* speakerIcon1.png in Resources */,
 				49DAF1AA1B222D3C008C3C63 /* twitterIcon1.png in Resources */,
 				49DAF1AD1B222D3C008C3C63 /* playIcon2.png in Resources */,
 				49DAF1AB1B222D3C008C3C63 /* magazineIcon1.png in Resources */,
@@ -548,17 +509,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		49E071981B3C981C00D6FF43 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				49E071A61B3C981C00D6FF43 /* NotificationController.m in Sources */,
-				49E071A31B3C981C00D6FF43 /* InterfaceController.m in Sources */,
-				49E071A91B3C981C00D6FF43 /* GlanceController.m in Sources */,
-				49E071C61B3D852000D6FF43 /* SecondInterfaceController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		49F5E6DD1B1CD5F00094278C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -574,6 +524,7 @@
 				49DAF18D1B21EC12008C3C63 /* OSTabBarController.m in Sources */,
 				49F141D71B66C17D0036C79D /* ASValueTrackingSlider.m in Sources */,
 				496FE7F51B680D320085BA64 /* DWFParticleGravityView.m in Sources */,
+				496EC5F31B7000160087FFD9 /* DWFMultipleParticleViewController.m in Sources */,
 				49DAF1931B21F2BE008C3C63 /* UIImage+Utils.m in Sources */,
 				49F141D61B66C17D0036C79D /* ASValuePopUpView.m in Sources */,
 				49F5E6ED1B1CD5F00094278C /* AFViewController.m in Sources */,
@@ -593,24 +544,23 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		49E071B11B3C981C00D6FF43 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 49E071AD1B3C981C00D6FF43 /* PeeBody WatchKit App */;
-			targetProxy = 49E071B01B3C981C00D6FF43 /* PBXContainerItemProxy */;
-		};
-		49E071BB1B3C981C00D6FF43 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 49E0719B1B3C981C00D6FF43 /* PeeBody WatchKit Extension */;
-			targetProxy = 49E071BA1B3C981C00D6FF43 /* PBXContainerItemProxy */;
-		};
 		49F5E6FC1B1CD5F00094278C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 49F5E6E01B1CD5F00094278C /* PeeBody */;
+			target = 49F5E6E01B1CD5F00094278C /* ParticleEmitter */;
 			targetProxy = 49F5E6FB1B1CD5F00094278C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		491EE9E01B73AA0100319C96 /* speakerIcon1.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				491EE9DF1B73AA0100319C96 /* Base */,
+				491EE9E11B73AA0400319C96 /* es */,
+			);
+			name = speakerIcon1.png;
+			sourceTree = "<group>";
+		};
 		49DAA1461B595688003831F2 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -650,62 +600,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		49E071BE1B3C981C00D6FF43 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				IBSC_MODULE = PeeBody_WatchKit_Extension;
-				INFOPLIST_FILE = "PeeBody WatchKit App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
-			};
-			name = Debug;
-		};
-		49E071BF1B3C981C00D6FF43 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				IBSC_MODULE = PeeBody_WatchKit_Extension;
-				INFOPLIST_FILE = "PeeBody WatchKit App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
-			};
-			name = Release;
-		};
-		49E071C11B3C981C00D6FF43 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "PeeBody WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		49E071C21B3C981C00D6FF43 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "PeeBody WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		49F5E7021B1CD5F00094278C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -792,6 +686,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PeeBody/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -803,6 +701,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PeeBody/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -847,24 +749,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		49E071BD1B3C981C00D6FF43 /* Build configuration list for PBXNativeTarget "PeeBody WatchKit App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				49E071BE1B3C981C00D6FF43 /* Debug */,
-				49E071BF1B3C981C00D6FF43 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		49E071C01B3C981C00D6FF43 /* Build configuration list for PBXNativeTarget "PeeBody WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				49E071C11B3C981C00D6FF43 /* Debug */,
-				49E071C21B3C981C00D6FF43 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		49F5E6DC1B1CD5F00094278C /* Build configuration list for PBXProject "PeeBody" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -874,7 +758,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		49F5E7041B1CD5F00094278C /* Build configuration list for PBXNativeTarget "PeeBody" */ = {
+		49F5E7041B1CD5F00094278C /* Build configuration list for PBXNativeTarget "ParticleEmitter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				49F5E7051B1CD5F00094278C /* Debug */,

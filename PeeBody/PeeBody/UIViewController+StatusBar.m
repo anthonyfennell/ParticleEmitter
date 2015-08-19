@@ -10,7 +10,7 @@
 
 @implementation UIViewController (StatusBar)
 
--(void)addStatusBarBackground{
+- (void)addStatusBarBackground {
     //for making the background of the UIStatus bar black
     UIView *statusBarView = [[UIView alloc] initWithFrame:CGRectMake(0, -20, [[self view] bounds].size.width, 22)];
     statusBarView.backgroundColor = [UIColor blackColor];

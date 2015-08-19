@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hOJ-tB-C0v">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hOJ-tB-C0v">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -23,14 +23,48 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7Wv-lY-t4V">
+                                <rect key="frame" x="16" y="146" width="123" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="cTB-GQ-88k"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="English"/>
+                                    <segment title="Spanish"/>
+                                </segments>
+                                <connections>
+                                    <action selector="languageChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="SC9-Dg-xIx"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3SN-6n-6UR">
+                                <rect key="frame" x="513" y="79" width="71" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="71" id="ikT-mr-7fb"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ikT-mr-7fb"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="7Wv-lY-t4V" firstAttribute="leading" secondItem="ft6-Lk-ICg" secondAttribute="leading" id="5jl-Dl-9S6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3SN-6n-6UR" secondAttribute="bottom" constant="450" id="8fI-mu-wLK"/>
                             <constraint firstItem="ft6-Lk-ICg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Mmu-LQ-gcH"/>
+                            <constraint firstItem="3SN-6n-6UR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="VBW-at-FyO"/>
+                            <constraint firstItem="7Wv-lY-t4V" firstAttribute="top" secondItem="ft6-Lk-ICg" secondAttribute="bottom" constant="38" id="Vkc-mJ-jcC"/>
                             <constraint firstItem="ft6-Lk-ICg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eW9-2S-PTq"/>
                             <constraint firstItem="ft6-Lk-ICg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="23" id="lTj-Xt-hgK"/>
+                            <constraint firstItem="3SN-6n-6UR" firstAttribute="trailing" secondItem="ft6-Lk-ICg" secondAttribute="trailing" id="nZS-r2-geG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ft6-Lk-ICg" secondAttribute="bottom" constant="492" id="uQq-Dw-fdo"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8fI-mu-wLK"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="rlN-67-QOh">
                         <barButtonItem key="leftBarButtonItem" title="show tray" id="WgO-In-Kaf">
@@ -46,11 +80,74 @@
                     </navigationItem>
                     <connections>
                         <outlet property="aLabel" destination="ft6-Lk-ICg" id="Tzo-lk-ckJ"/>
+                        <outlet property="imageView" destination="3SN-6n-6UR" id="yVY-FC-ekK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1351" y="545"/>
+        </scene>
+        <!--Multiple Particle View Controller-->
+        <scene sceneID="gq1-Yf-m5B">
+            <objects>
+                <viewController id="S0k-X1-icv" customClass="DWFMultipleParticleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GjU-fD-WAq"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tfh-MO-cDu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="htC-wM-PWQ" customClass="DWFParticleView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tt0-Mo-M1B" customClass="DWFParticleView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdc-iJ-oEe" customClass="DWFParticleView">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIO-oh-v0a">
+                                                <rect key="frame" x="8" y="8" width="35" height="30"/>
+                                                <state key="normal" title="Back">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="ML1-r7-Lw3" kind="unwind" unwindAction="unwindMultipleParticleViewController:" id="pox-AE-I67"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="FIO-oh-v0a" firstAttribute="leading" secondItem="tdc-iJ-oEe" secondAttribute="leadingMargin" id="NLJ-Bh-9XN"/>
+                                            <constraint firstItem="FIO-oh-v0a" firstAttribute="top" secondItem="tdc-iJ-oEe" secondAttribute="topMargin" id="oBK-tn-NE3"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tdc-iJ-oEe" firstAttribute="top" secondItem="tt0-Mo-M1B" secondAttribute="top" id="JAZ-7s-Cbk"/>
+                                    <constraint firstItem="tdc-iJ-oEe" firstAttribute="leading" secondItem="tt0-Mo-M1B" secondAttribute="leading" id="JeR-AB-xLa"/>
+                                    <constraint firstAttribute="trailing" secondItem="tdc-iJ-oEe" secondAttribute="trailing" id="cKt-Q1-jPY"/>
+                                    <constraint firstAttribute="bottom" secondItem="tdc-iJ-oEe" secondAttribute="bottom" id="ys1-Bt-KXh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tt0-Mo-M1B" firstAttribute="top" secondItem="htC-wM-PWQ" secondAttribute="top" id="Aeo-16-yZH"/>
+                            <constraint firstItem="tt0-Mo-M1B" firstAttribute="leading" secondItem="htC-wM-PWQ" secondAttribute="leading" id="Aes-Gr-PXy"/>
+                            <constraint firstAttribute="trailing" secondItem="tt0-Mo-M1B" secondAttribute="trailing" id="JnM-qO-aMD"/>
+                            <constraint firstItem="tt0-Mo-M1B" firstAttribute="bottom" secondItem="Tfh-MO-cDu" secondAttribute="top" id="nWd-Fh-yty"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomView" destination="htC-wM-PWQ" id="BPs-OT-f36"/>
+                        <outlet property="middleView" destination="tt0-Mo-M1B" id="iDD-12-dfD"/>
+                        <outlet property="topView" destination="tdc-iJ-oEe" id="CwR-Mg-t05"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="21a-cm-jEp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ML1-r7-Lw3" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1640" y="1184"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jFH-qP-vCL">
@@ -82,25 +179,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="0.0" maxValue="75" translatesAutoresizingMaskIntoConstraints="NO" id="qAt-Ze-UMn" userLabel="spin" customClass="ASValueTrackingSlider">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="qAt-Ze-UMn" userLabel="spin" customClass="ASValueTrackingSlider">
                                 <rect key="frame" x="168" y="502" width="150" height="31"/>
                                 <connections>
                                     <action selector="slidersMoved:" destination="hOJ-tB-C0v" eventType="valueChanged" id="8KI-ot-4Uj"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-250" maxValue="250" translatesAutoresizingMaskIntoConstraints="NO" id="R8U-Dw-yDp" userLabel="yAccel" customClass="ASValueTrackingSlider">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="-15" minValue="-30" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="R8U-Dw-yDp" userLabel="yAccel" customClass="ASValueTrackingSlider">
                                 <rect key="frame" x="168" y="442" width="150" height="31"/>
                                 <connections>
                                     <action selector="slidersMoved:" destination="hOJ-tB-C0v" eventType="valueChanged" id="0lW-G7-GC5"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-250" maxValue="250" translatesAutoresizingMaskIntoConstraints="NO" id="buK-gt-rbw" userLabel="xAccel" customClass="ASValueTrackingSlider">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" minValue="-30" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="buK-gt-rbw" userLabel="xAccel" customClass="ASValueTrackingSlider">
                                 <rect key="frame" x="168" y="382" width="150" height="31"/>
                                 <connections>
                                     <action selector="slidersMoved:" destination="hOJ-tB-C0v" eventType="valueChanged" id="QWx-td-tk3"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-250" maxValue="250" translatesAutoresizingMaskIntoConstraints="NO" id="7K0-c6-dhr" userLabel="zAccel" customClass="ASValueTrackingSlider">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-30" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="7K0-c6-dhr" userLabel="zAccel" customClass="ASValueTrackingSlider">
                                 <rect key="frame" x="168" y="322" width="150" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="146" id="zYP-Y9-dEp"/>
@@ -115,19 +212,19 @@
                                     <action selector="slidersMoved:" destination="hOJ-tB-C0v" eventType="valueChanged" id="BZf-b0-SuT"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-250" maxValue="250" translatesAutoresizingMaskIntoConstraints="NO" id="57t-cC-cvX" userLabel="velocity" customClass="ASValueTrackingSlider">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="-50" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="57t-cC-cvX" userLabel="velocity" customClass="ASValueTrackingSlider">
                                 <rect key="frame" x="322" y="562" width="150" height="31"/>
                                 <connections>
                                     <action selector="slidersMoved:" destination="hOJ-tB-C0v" eventType="valueChanged" id="iDY-YD-8iI"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="sH8-an-Owc" userLabel="velocityRange" customClass="ASValueTrackingSlider">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="25" translatesAutoresizingMaskIntoConstraints="NO" id="sH8-an-Owc" userLabel="velocityRange" customClass="ASValueTrackingSlider">
                                 <rect key="frame" x="322" y="502" width="150" height="31"/>
                                 <connections>
                                     <action selector="slidersMoved:" destination="hOJ-tB-C0v" eventType="valueChanged" id="Wol-KA-FWT"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="200" minValue="0.0" maxValue="400" translatesAutoresizingMaskIntoConstraints="NO" id="Qwf-wb-W5s" userLabel="birthRate" customClass="ASValueTrackingSlider">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Qwf-wb-W5s" userLabel="birthRate" customClass="ASValueTrackingSlider">
                                 <rect key="frame" x="14" y="322" width="150" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="146" id="5WR-nc-FQz"/>
@@ -136,7 +233,7 @@
                                     <action selector="slidersMoved:" destination="hOJ-tB-C0v" eventType="valueChanged" id="vSk-iT-Ecn"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="El6-jA-Zkk" userLabel="lifetime" customClass="ASValueTrackingSlider">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2.5" minValue="0.0" maxValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="El6-jA-Zkk" userLabel="lifetime" customClass="ASValueTrackingSlider">
                                 <rect key="frame" x="14" y="442" width="150" height="31"/>
                                 <connections>
                                     <action selector="slidersMoved:" destination="hOJ-tB-C0v" eventType="valueChanged" id="T1F-Uz-QKs"/>
@@ -148,26 +245,28 @@
                                     <action selector="slidersMoved:" destination="hOJ-tB-C0v" eventType="valueChanged" id="y1Y-kF-C0U"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.30000001192092896" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Pxn-rh-QW7" userLabel="scale" customClass="ASValueTrackingSlider">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Pxn-rh-QW7" userLabel="scale" customClass="ASValueTrackingSlider">
                                 <rect key="frame" x="14" y="382" width="150" height="31"/>
                                 <connections>
                                     <action selector="slidersMoved:" destination="hOJ-tB-C0v" eventType="valueChanged" id="5al-VO-o5Y"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="W4t-lY-XMs" userLabel="scaleSpeed" customClass="ASValueTrackingSlider">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.20000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="W4t-lY-XMs" userLabel="scaleSpeed" customClass="ASValueTrackingSlider">
                                 <rect key="frame" x="14" y="562" width="150" height="31"/>
                                 <connections>
                                     <action selector="slidersMoved:" destination="hOJ-tB-C0v" eventType="valueChanged" id="pbs-sw-iM3"/>
                                 </connections>
                             </slider>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4gu-xe-8Xp">
-                                <rect key="frame" x="336" y="425" width="123" height="29"/>
+                                <rect key="frame" x="336" y="425" width="187" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="123" id="8gT-3S-tGM"/>
+                                    <constraint firstAttribute="width" constant="187" id="8gT-3S-tGM"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="Fire"/>
-                                    <segment title="Firework"/>
+                                    <segment title="Smoke"/>
+                                    <segment title="Fire2"/>
+                                    <segment title="Fire3"/>
+                                    <segment title="Fire4"/>
                                 </segments>
                                 <connections>
                                     <action selector="segmentedControlTapped:" destination="hOJ-tB-C0v" eventType="valueChanged" id="ZNj-2M-Ab9"/>
@@ -233,26 +332,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stO-lY-leG">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="eMO-gK-K0f"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3N-J3-K89">
+                                <rect key="frame" x="552" y="20" width="32" height="30"/>
                                 <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="eMO-gK-K0f"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="eMO-gK-K0f"/>
-                                    </mask>
-                                </variation>
                                 <connections>
-                                    <segue destination="zcJ-AK-p3i" kind="presentation" id="MZU-Dr-6Qx"/>
+                                    <segue destination="zcJ-AK-p3i" kind="presentation" id="yiH-3L-8FE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -266,7 +353,7 @@
                             <constraint firstItem="R8U-Dw-yDp" firstAttribute="leading" secondItem="El6-jA-Zkk" secondAttribute="trailing" constant="8" symbolic="YES" id="CKr-as-HSY"/>
                             <constraint firstItem="d13-m1-dSz" firstAttribute="top" secondItem="5vh-gp-W6C" secondAttribute="bottom" constant="8" id="ChK-5x-0a6"/>
                             <constraint firstItem="sH8-an-Owc" firstAttribute="leading" secondItem="qAt-Ze-UMn" secondAttribute="trailing" constant="8" symbolic="YES" id="DUz-Hq-XBV"/>
-                            <constraint firstItem="sH8-an-Owc" firstAttribute="centerX" secondItem="4gu-xe-8Xp" secondAttribute="centerX" id="DdR-hg-pD9"/>
+                            <constraint firstItem="sH8-an-Owc" firstAttribute="centerX" secondItem="4gu-xe-8Xp" secondAttribute="centerX" constant="-32.5" id="DdR-hg-pD9"/>
                             <constraint firstItem="cVS-1G-z0b" firstAttribute="leading" secondItem="W4t-lY-XMs" secondAttribute="leading" id="DpB-BZ-mMs"/>
                             <constraint firstItem="R8U-Dw-yDp" firstAttribute="top" secondItem="El6-jA-Zkk" secondAttribute="top" id="EX8-05-ZjY"/>
                             <constraint firstItem="8gB-Ef-9EL" firstAttribute="top" secondItem="d13-m1-dSz" secondAttribute="bottom" constant="4" id="Ef7-CF-1sM"/>
@@ -287,12 +374,13 @@
                             <constraint firstItem="oNi-Nc-1V5" firstAttribute="trailing" secondItem="sH8-an-Owc" secondAttribute="trailing" constant="53" id="R9n-ub-6fo"/>
                             <constraint firstItem="El6-jA-Zkk" firstAttribute="leading" secondItem="QN9-yZ-SBp" secondAttribute="leadingMargin" id="SHk-8T-exZ"/>
                             <constraint firstItem="Qwf-wb-W5s" firstAttribute="top" secondItem="7K0-c6-dhr" secondAttribute="top" id="SIN-ri-fZo"/>
+                            <constraint firstItem="M3N-J3-K89" firstAttribute="trailing" secondItem="QN9-yZ-SBp" secondAttribute="trailingMargin" id="SXO-YJ-wDo"/>
                             <constraint firstItem="El6-jA-Zkk" firstAttribute="leading" secondItem="Pxn-rh-QW7" secondAttribute="leading" id="TMc-J0-CKc"/>
                             <constraint firstItem="cVS-1G-z0b" firstAttribute="top" secondItem="qAt-Ze-UMn" secondAttribute="top" id="UlF-EQ-Gk6"/>
                             <constraint firstItem="sH8-an-Owc" firstAttribute="trailing" secondItem="57t-cC-cvX" secondAttribute="trailing" id="V8A-WE-Q5y"/>
                             <constraint firstItem="8gB-Ef-9EL" firstAttribute="bottom" secondItem="7K0-c6-dhr" secondAttribute="bottom" constant="9" id="VUh-lY-SjN"/>
-                            <constraint firstItem="stO-lY-leG" firstAttribute="top" secondItem="Xwq-Lk-VfK" secondAttribute="bottom" constant="-11" id="Y5m-8w-Dol"/>
                             <constraint firstItem="buK-gt-rbw" firstAttribute="leading" secondItem="R8U-Dw-yDp" secondAttribute="leading" id="YCz-vt-Ahj"/>
+                            <constraint firstItem="M3N-J3-K89" firstAttribute="top" secondItem="Xwq-Lk-VfK" secondAttribute="bottom" id="YKK-Tv-iiZ"/>
                             <constraint firstItem="qAt-Ze-UMn" firstAttribute="leading" secondItem="R8U-Dw-yDp" secondAttribute="leading" id="cOl-Yd-1i3"/>
                             <constraint firstItem="cVS-1G-z0b" firstAttribute="top" secondItem="El6-jA-Zkk" secondAttribute="bottom" constant="30" id="dVy-Xz-iyB"/>
                             <constraint firstItem="buK-gt-rbw" firstAttribute="leading" secondItem="7K0-c6-dhr" secondAttribute="leading" id="eEq-qY-f6b"/>
@@ -309,29 +397,10 @@
                             <constraint firstItem="qAt-Ze-UMn" firstAttribute="leading" secondItem="nDC-QH-7sR" secondAttribute="leading" id="oAA-Dq-S4Q"/>
                             <constraint firstItem="7K0-c6-dhr" firstAttribute="leading" secondItem="Qwf-wb-W5s" secondAttribute="trailing" constant="8" symbolic="YES" id="oGf-jK-rXS"/>
                             <constraint firstItem="buK-gt-rbw" firstAttribute="leading" secondItem="Pxn-rh-QW7" secondAttribute="trailing" constant="8" symbolic="YES" id="sI2-DG-6Jj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="stO-lY-leG" secondAttribute="trailing" constant="-6" id="tGZ-mC-VPc"/>
                             <constraint firstItem="nDC-QH-7sR" firstAttribute="top" secondItem="57t-cC-cvX" secondAttribute="top" id="tLI-Ii-8hu"/>
                             <constraint firstItem="d13-m1-dSz" firstAttribute="leading" secondItem="5vh-gp-W6C" secondAttribute="leading" id="uRn-x2-uRw"/>
                             <constraint firstItem="4gu-xe-8Xp" firstAttribute="centerY" secondItem="R8U-Dw-yDp" secondAttribute="centerY" constant="-18" id="x5y-nZ-f2L"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="stO-lY-leG"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="Y5m-8w-Dol"/>
-                                <exclude reference="tGZ-mC-VPc"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=regular">
-                            <mask key="subviews">
-                                <include reference="stO-lY-leG"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="Y5m-8w-Dol"/>
-                                <include reference="tGZ-mC-VPc"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="birthRateSlider" destination="Qwf-wb-W5s" id="QTF-4g-b3X"/>
@@ -351,7 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l0d-yX-FDn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="223.5" y="1185.75"/>
+            <point key="canvasLocation" x="223" y="1185"/>
         </scene>
         <!--Gravity View Controller-->
         <scene sceneID="tnE-w6-LbT">
@@ -362,41 +431,37 @@
                         <viewControllerLayoutGuide type="bottom" id="9jb-IV-FuZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MBk-Mb-dj6" customClass="DWFParticleGravityView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhn-pk-6cH">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXI-UR-1eS">
+                                <rect key="frame" x="16" y="20" width="35" height="30"/>
                                 <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vIH-Hb-tS2" kind="unwind" unwindAction="unwindGravityViewController:" id="ymi-em-NZK"/>
+                                    <segue destination="vIH-Hb-tS2" kind="unwind" unwindAction="unwindGravityViewController:" id="4Bh-Rs-Yab"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIj-xN-016">
+                                <rect key="frame" x="552" y="20" width="32" height="30"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="S0k-X1-icv" kind="presentation" id="qer-If-cof"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bhn-pk-6cH" firstAttribute="leading" secondItem="MBk-Mb-dj6" secondAttribute="leadingMargin" constant="-8" id="Qxe-Mp-i2j"/>
-                            <constraint firstItem="bhn-pk-6cH" firstAttribute="top" secondItem="qBU-N7-bXl" secondAttribute="bottom" constant="-13" id="vNb-wX-J2Z"/>
+                            <constraint firstItem="hXI-UR-1eS" firstAttribute="leading" secondItem="MBk-Mb-dj6" secondAttribute="leadingMargin" id="3uE-Pa-z1e"/>
+                            <constraint firstItem="MIj-xN-016" firstAttribute="baseline" secondItem="hXI-UR-1eS" secondAttribute="baseline" id="S46-YP-DHe"/>
+                            <constraint firstItem="hXI-UR-1eS" firstAttribute="top" secondItem="qBU-N7-bXl" secondAttribute="bottom" id="ijT-Ms-qaD"/>
+                            <constraint firstItem="MIj-xN-016" firstAttribute="trailing" secondItem="MBk-Mb-dj6" secondAttribute="trailingMargin" id="mER-Yk-5Fq"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="bhn-pk-6cH"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="Qxe-Mp-i2j"/>
-                                <exclude reference="vNb-wX-J2Z"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=regular">
-                            <mask key="subviews">
-                                <include reference="bhn-pk-6cH"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="Qxe-Mp-i2j"/>
-                                <include reference="vNb-wX-J2Z"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="fireView" destination="MBk-Mb-dj6" id="uxg-0D-4Eb"/>
