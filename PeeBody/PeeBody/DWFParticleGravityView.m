@@ -38,7 +38,7 @@
     fire.lifetime = 3;
     fire.lifetimeRange = 0.5;
     fire.color = [[UIColor colorWithRed:0.8 green:0.4 blue:0.2 alpha:0.1] CGColor];
-    fire.contents = (id)[[UIImage imageNamed:@"particlesFire1"] CGImage];
+    fire.contents = (id)[[UIImage imageNamed:@"particlesFire2"] CGImage];
     fire.velocity = 26;
     fire.velocityRange = 10;
     fire.emissionRange = M_PI;
